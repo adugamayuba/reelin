@@ -6,22 +6,22 @@ import expense from "../../assets/png/expense.png";
 import Image from "next/image";
 const Why = () => {
   return (
-    <div className="w-full bg-[#f4f4f4] py-[120px]" id="why">
+    <div
+      className="w-full bg-[#f4f4f4] py-[120px]"
+      id="why"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <ContainerLayout>
         <div className="w-full flex flex-col items-center flow-hide">
-          <h1
-            className="text-customBlack text-[28px] md:text-[40px] 2xl:text-[56px] font-bold text-center "
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
+          <h1 className="text-customBlack text-[28px] md:text-[40px] 2xl:text-[56px] font-bold text-center ">
             Why Choose Reelin?
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-6 flow-hide">
             {/* start of a grid */}
             <div
               className="w-full bg-[#35C8BF] rounded-[8px]  flex flex-col pt-6 pb-4"
-              data-aos="fade-down"
-              data-aos-duration="2000"
+          
             >
               <h1 className="text-white text-2xl font-bold px-6 ">
                 AI-Powered Analytics
@@ -38,8 +38,7 @@ const Why = () => {
             {/* start of a grid */}
             <div
               className="w-full bg-[#4679EF] rounded-[8px]  flex flex-col pt-6 pb-4"
-              data-aos="fade-up"
-              data-aos-duration="2000"
+             
             >
               <h1 className="text-white text-2xl font-bold px-6 ">
                 Real-time Insights
@@ -56,8 +55,7 @@ const Why = () => {
             {/* start of a grid */}
             <div
               className="w-full bg-[#8265F6] rounded-[8px]  flex flex-col pt-6 "
-              data-aos="fade-down"
-              data-aos-duration="2000"
+            
             >
               <h1 className="text-white text-2xl font-bold px-6 ">
                 Actionable Intelligence
@@ -74,8 +72,7 @@ const Why = () => {
           </div>
           <div
             className="mx-auto mt-[60px]"
-            data-aos="fade-up"
-            data-aos-duration="2000"
+          
           >
             <Link
               href="#why"
