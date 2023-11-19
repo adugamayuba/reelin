@@ -42,7 +42,7 @@ const ContactUs = () => {
                 />
               </div>
             </div>
-            <button className="w-10/12 mx-auto h-[48px]  py-6 bg-[#0047A7] text-white flex items-center justify-center rounded-[8px] mt-[48px] cursor-pointer ">
+            <button className="w-10/12 mx-auto h-[48px]  py-6 bg-[#0e0e0e] hover:bg-[#0047A7] text-white flex items-center justify-center rounded-[8px] mt-[48px] cursor-pointer ">
               Send
             </button>
           </div>

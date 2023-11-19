@@ -13,7 +13,7 @@ const Hero = () => {
           data-aos="zoom-in"
           data-aos-duration="2000"
         >
-          <h1 className="font-bold text-customBlack text-[28px] sm:text-[32px] lg:text-[56px] 2xl:text-[80px] text-center lg:w-9/12 2xl:w-9/12 2xl:leading[88px] mt-8">
+          <h1 className="font-bold text-customBlack text-[28px] sm:text-[32px] lg:text-[56px] 2xl:text-[80px] text-center lg:w-11/12 2xl:w-11/12 2xl:leading-[88px] block mt-8 2xl:mt-[100px] tracking-[-2%]">
             Unlock a Deeper Understanding of your Business with Reelin
           </h1>
           <p className="xl:text-2xl  text-customBlack font-light text-center mt-6 ">
@@ -25,7 +25,7 @@ const Hero = () => {
               href="#"
               // target="_blank"
               // rel="noopener noreferrer"
-              className="w-auto  px-8 py-4 bg-[#0e0e0e] text-white flex items-center justify-center rounded-[6px]"
+              className="w-auto  px-8 py-4 bg-[#0e0e0e] hover:bg-[#0047A7] text-white flex items-center justify-center rounded-[6px]"
             >
               Get Started
             </Link>

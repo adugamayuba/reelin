@@ -19,10 +19,7 @@ const Why = () => {
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-6 flow-hide">
             {/* start of a grid */}
-            <div
-              className="w-full bg-[#35C8BF] rounded-[8px]  flex flex-col pt-6 pb-4"
-          
-            >
+            <div className="w-full bg-[#35C8BF] rounded-[8px]  flex flex-col pt-6 pb-4">
               <h1 className="text-white text-2xl font-bold px-6 ">
                 AI-Powered Analytics
               </h1>
@@ -36,10 +33,7 @@ const Why = () => {
             </div>
             {/* end of a grid */}
             {/* start of a grid */}
-            <div
-              className="w-full bg-[#4679EF] rounded-[8px]  flex flex-col pt-6 pb-4"
-             
-            >
+            <div className="w-full bg-[#4679EF] rounded-[8px]  flex flex-col pt-6 pb-4">
               <h1 className="text-white text-2xl font-bold px-6 ">
                 Real-time Insights
               </h1>
@@ -53,10 +47,7 @@ const Why = () => {
             </div>
             {/* end of a grid */}
             {/* start of a grid */}
-            <div
-              className="w-full bg-[#8265F6] rounded-[8px]  flex flex-col pt-6 "
-            
-            >
+            <div className="w-full bg-[#8265F6] rounded-[8px]  flex flex-col pt-6 ">
               <h1 className="text-white text-2xl font-bold px-6 ">
                 Actionable Intelligence
               </h1>
@@ -70,15 +61,12 @@ const Why = () => {
             </div>
             {/* end of a grid */}
           </div>
-          <div
-            className="mx-auto mt-[60px]"
-          
-          >
+          <div className="mx-auto mt-[60px]">
             <Link
               href="#why"
               // target="_blank"
               // rel="noopener noreferrer"
-              className="w-auto  px-8 py-4 border border-customBlack text-customBlack font-bold flex items-center justify-center rounded-[6px]"
+              className="w-auto  px-8 py-4 border border-customBlack text-customBlack font-bold flex items-center justify-center rounded-[6px]  hover:bg-[#0047A7] hover:text-white hover:border-none"
             >
               Explore Features
             </Link>

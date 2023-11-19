@@ -1,19 +1,20 @@
-import React from "react";
+import {useState} from "react";
 import ContainerLayout from "../../Layouts/ContainerLayout";
 import { BlackLogo } from "../../assets/svg";
 
 import { useRouter } from "next/router";
-
+import ReUseModal from "../modal/ReuseAble";
 
 import Link from "next/link";
 const Navbar = () => {
   const router = useRouter();
+  const [open, setOpen] = useState(false);
   return (
     <div className="fixed top-0 right-0 left-0 z-high w-full h-[85px]  items-center nav-styl hidden md:flex bg-white">
       <ContainerLayout>
         <div className="w-full flex justify-between items-center mt-4">
           <div className="w-fit">
-       <BlackLogo />
+            <BlackLogo />
           </div>
           <div className="w-fit space-x-[50px] flex ">
             <Link
@@ -48,25 +49,37 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="w-fit flex items-center  space-x-4   ">
-            <Link
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-auto  px-8 py-4 border border-customBlack text-customBlack flex items-center justify-center rounded-[6px]"
+            <p
+              onClick={() => setOpen(!open)}
+              className="w-auto  px-8 py-4 border border-customBlack text-customBlack hover:bg-[#0047A7] hover:text-white flex items-center justify-center rounded-[6px] hover:border-none cursor-pointer"
             >
-              Login
-            </Link>
-            <Link
-              href="#"
-              // target="_blank"
-              // rel="noopener noreferrer"
-              className="w-auto  px-8 py-4 bg-[#0e0e0e] text-white flex items-center justify-center rounded-[6px]"
+              Join Waitlist
+            </p>
+            {/* <p
+              onClick={() => setOpen(!open)}
+              className="w-auto  px-8 py-4 hover:bg-[#0047A7] bg-[#0e0e0e] cursor-pointer text-white flex items-center justify-center rounded-[6px]"
             >
               Get Started
-            </Link>
+            </p> */}
           </div>
         </div>
       </ContainerLayout>
+      <ReUseModal open={open} setOpen={setOpen}>
+        <div className="w-full flex flex-col items-center">
+          <p className="text-customBlack text-lg text-center mb-8">
+            Be the first to know when we launch
+          </p>
+          <Link
+            href="#contact"
+            // target="_blank"
+            // rel="noopener noreferrer"
+            className="w-auto  px-8 py-4 border border-customBlack text-customBlack font-bold flex items-center justify-center rounded-[6px]  hover:bg-[#0047A7] hover:text-white hover:border-none"
+            onClick={() => setOpen(!open)}
+          >
+            Join Waitlist
+          </Link>
+        </div>
+      </ReUseModal>
     </div>
   );
 };

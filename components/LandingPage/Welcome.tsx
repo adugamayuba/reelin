@@ -6,9 +6,8 @@ const Welcome = () => {
   return (
     <div className="w-full flex flex-col relative ">
       <div
-        className="w-full 2xl:w-10/12  z-0  mx-auto flow-hide"
-        data-aos="fade-up"
-        data-aos-duration="2000"
+        className="w-full 2xl:w-10/12 max-w-[1036px]  z-0  mx-auto flow-hide border rounded-[24px] bg-[#f7f7f7] mb-6 lg:mb-[-70px]"
+   
       >
         <Image
           src={home}
@@ -19,9 +18,9 @@ const Welcome = () => {
         />
       </div>
 
-      <div className="w-full blue-bg py-24 mt-[10px] flow-hide">
+      <div className="w-full blue-bg  mt-[10px] flow-hide ">
         <ContainerLayout>
-          <div className="w-full flex flex-col items-center flow-hide ">
+          <div className="w-full flex flex-col items-center flow-hide lg:min-h-[648px] py-4 lg:py-0 justify-center  ">
             <h1
               className="text-white font-bold sm:text-[32px] text-2xl lg:text-[48px] text-center "
               data-aos="fade-up"
@@ -53,7 +52,7 @@ const Welcome = () => {
                 href="#"
                 // target="_blank"
                 // rel="noopener noreferrer"
-                className="w-auto  px-8 py-4 bg-[#fff] text-customBlack flex items-center justify-center rounded-[6px]"
+                className="w-auto  px-8 py-4 bg-[#fff] text-customBlack flex items-center justify-center rounded-[6px] hover:border-white hover:border hover:text-white hover:bg-transparent "
               >
                 Get Started
               </Link>
