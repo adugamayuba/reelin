@@ -142,16 +142,22 @@ const Footer = () => {
                       Follow Us On
                     </h1>
                     <div className="w-full flex items-center space-x-4 mt-5">
-                      <Link href="/">
+                      <Link href="https://www.facebook.com/reelinhq" target='_blank'>
                         <Facebook />
                       </Link>
-                      <Link href="/">
+                      <Link
+                        href="https://www.linkedin.com/company/reelinhq/"
+                        target="_blank"
+                      >
                         <LinkedIn />
                       </Link>
-                      <Link href="/">
+                      <Link href="https://www.x.com/reelinHQ" target="_blank">
                         <Twitter />
                       </Link>
-                      <Link href="/">
+                      <Link
+                        href="https://www.instagram.com/reelinhq"
+                        target="_blank"
+                      >
                         <Instagram />
                       </Link>
                     </div>
