@@ -42,7 +42,7 @@ export default function App({ Component, pageProps }) {
        />
        <Script
          id="google"
-         src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+         src={`https://www.googletagmanager.com/gtag/js?id=GTM-T32WDD8H`}
          type="text/javascript"
          strategy="lazyOnload"
        />
@@ -51,7 +51,7 @@ export default function App({ Component, pageProps }) {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config','G-W6FXH2Z651' );`}
+  gtag('config','GTM-T32WDD8H' );`}
        </Script>
      </ThemeProvider>
    );
