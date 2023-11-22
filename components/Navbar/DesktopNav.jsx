@@ -50,7 +50,7 @@ const Navbar = () => {
           </div>
           <div className="w-fit flex items-center  space-x-4   ">
             <p
-              onClick={() => setOpen(!open)}
+              onClick={() => router.push("/waitlist")}
               className="w-auto  px-8 py-4 border border-customBlack text-customBlack hover:bg-[#0047A7] hover:text-white flex items-center justify-center rounded-[6px] hover:border-none cursor-pointer"
             >
               Join Waitlist

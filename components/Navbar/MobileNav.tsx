@@ -71,21 +71,13 @@ const MobileNav = ({present} : any ) => {
                 </div>
                 <div className="w-full flex items-center space-x-4 pt-20 ">
                   <Link
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/waitlist"
+                 
                     className="w-auto  px-8 py-4 border border-customBlack text-customBlack flex items-center justify-center rounded-[6px] "
                   >
-                    Login
+                    Join waitlist
                   </Link>
-                  <Link
-                    href="#"
-                    // target="_blank"
-                    // rel="noopener noreferrer"
-                    className="w-auto  px-8 py-4 bg-[#0e0e0e] text-white flex items-center justify-center rounded-[6px]"
-                  >
-                    Get Started
-                  </Link>
+                
                 </div>
               </div>
             </div>
