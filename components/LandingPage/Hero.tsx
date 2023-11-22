@@ -22,7 +22,7 @@ const Hero = () => {
           </p>
           <div className="mt-12 mx-auto">
             <Link
-              href="#"
+              href="/waitlist"
               // target="_blank"
               // rel="noopener noreferrer"
               className="w-auto  px-8 py-4 bg-[#0e0e0e] hover:bg-[#0047A7] text-white flex items-center justify-center rounded-[6px]"

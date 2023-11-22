@@ -43,7 +43,7 @@ const Welcome = () => {
               Gain Clarity, control,and confidence in your finances
             </p>
 
-            <div
+            {/* <div
               className="mt-12 mx-auto"
               data-aos="fade-up"
               data-aos-duration="2000"
@@ -56,7 +56,7 @@ const Welcome = () => {
               >
                 Get Started
               </Link>
-            </div>
+            </div> */}
           </div>
         </ContainerLayout>
       </div>
