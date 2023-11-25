@@ -1,9 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ContainerLayout from '../../Layouts/ContainerLayout'
+import { toast } from 'react-toastify';
+import { postWaitList } from '../../services/homeServices';
 
 const ContactUs = () => {
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
+    const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+   const handlePost = () => {
+     console.log(email);
+     setLoading(true);
+     const data = {
+       email: email,
+       name: name,
+     };
+
+     const resp = postWaitList(data).then((res) => {
+       setLoading(false);
+       setEmail("");
+       setName("");
+       setMessage("");
+
+       toast.success("Successfully!  We will get back to you as soon as possible");
+     });
+   };
   return (
-    <div className="w-full  py-12 fine-bg mt-12 flow-hide" id='contact'>
+    <div className="w-full  py-12 fine-bg mt-12 flow-hide" id="contact">
       <ContainerLayout>
         <div className="w-full flex flex-col flow-hide ">
           {/* left side */}
@@ -25,6 +48,8 @@ const ContactUs = () => {
                   className="rounded-[8px] flex items-center px-6 mt-2 placeholder:text-ash placeholder:text-opacity-40 border border-ash border-opacity-40 w-full h-[60px] outline-ash"
                   placeholder="Name"
                   required
+                  value={name}
+                  onChange={(e: any) => setName(e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
@@ -33,17 +58,21 @@ const ContactUs = () => {
                   required
                   className="rounded-[8px] flex items-center px-6 mt-2 placeholder:text-ash placeholder:text-opacity-40 border border-ash border-opacity-40 w-full h-[60px] outline-ash"
                   placeholder="Email"
+                  value={email}
+                  onChange={(e: any) => setEmail(e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
                 <textarea
                   className="rounded-[8px] pt-5 px-6 mt-2 placeholder:text-ash placeholder:text-opacity-40 border border-ash border-opacity-40 w-full h-[100px] outline-ash"
                   placeholder="Message"
+                  value={message}
+                  onChange={(e: any) => setMessage(e.target.value)}
                 />
               </div>
             </div>
-            <button className="w-10/12 mx-auto h-[48px]  py-6 bg-[#0e0e0e] hover:bg-[#0047A7] text-white flex items-center justify-center rounded-[8px] mt-[48px] cursor-pointer ">
-              Send
+            <button className="w-10/12 mx-auto h-[48px]  py-6 bg-[#0e0e0e] hover:bg-[#0047A7] text-white flex items-center justify-center rounded-[8px] mt-[48px] cursor-pointer " onClick={handlePost}>
+              {loading ? "Loading..." : "Send"}
             </button>
           </div>
           {/* end pf left ##############################################33side */}

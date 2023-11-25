@@ -1,12 +1,32 @@
-
+import { useState } from 'react';
 import { BlackLogo } from '../../assets/svg';
 import ContainerLayout from '../../Layouts/ContainerLayout';
 import Image from 'next/image';
 import homer from "../../assets/png/homer.png"
+import {postWaitList} from "../../services/homeServices"
+import { toast } from 'react-toastify';
 const WaitlistPage = () => {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handlePost = () => {
+    console.log(email)
+    setLoading(true);
+    const data = {
+      email: email,
+      name:`user ${new Date().getMilliseconds()}`
+    }
+  
+    const resp = postWaitList(data).then((res) => {
+      setLoading(false);
+      setEmail("");
+      toast.success("Successfully Joined")
+    });
+
+
+  }
   return (
-    <div className='w-full'>
-    
+    <div className="w-full">
       <ContainerLayout>
         <div className="w-full flex flex-col lg:flex-row relative h-full items-center justify-center 2xl:mt-8 ">
           {/* lrft side */}
@@ -27,6 +47,8 @@ const WaitlistPage = () => {
               </span>
               <input
                 type="text"
+                value={email}
+                onChange={(e: any) => setEmail(e.target.value)}
                 className="text-base lg:text-lg outline-none border-none bg-inherit placeholder:text-[#828282] font-[300] noto "
               />
             </div>
@@ -37,17 +59,20 @@ const WaitlistPage = () => {
               </p>
             </div>
             <div className="w-full max-w-[496px] mt-12 ">
-                          <button className="w-full rounded-[8px] bg-customBlack text-white h-[60px] hover:bg-[#0047A7] cursor-pointer">
-                              Join waitlist
+              <button
+                className="w-full rounded-[8px] bg-customBlack text-white h-[60px] hover:bg-[#0047A7] cursor-pointer"
+                onClick={handlePost}
+              >
+                {loading ? "Loading..." : "Join waitlist"}
               </button>
             </div>
           </div>
           {/* right  side */}
           {/* lrft side */}
-                  <div className="w-full lg:mt-0 mt-8 lg:w-5/12 flex justify-end relative h-full">
-                      <div className="w-full flex ">
-                          <Image src={homer} alt='homer'  />
-                      </div>
+          <div className="w-full lg:mt-0 mt-8 lg:w-5/12 flex justify-end relative h-full">
+            <div className="w-full flex ">
+              <Image src={homer} alt="homer" />
+            </div>
           </div>
         </div>
       </ContainerLayout>

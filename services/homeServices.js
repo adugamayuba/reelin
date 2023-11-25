@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const resolveUrl = (url) => `/api/resolver?url=${url}`;
-const baseURL = "https://api.versuspay.co/api/v1/";
+const baseURL = "https://allocate.versuspay.co/v1";
 async function postNewsLetter({ email }) {
   try {
     const url = resolveUrl(`${baseURL}/web/newsletter`);
@@ -19,17 +19,15 @@ async function postNewsLetter({ email }) {
     console.log(error.response);
   }
 }
-async function postWaitList({ email }) {
+async function postWaitList({ email,name }) {
   try {
-    const url = resolveUrl(`${baseURL}/web/waitlist`);
+    const url = resolveUrl(`${baseURL}/waitlist`);
     // url=/api/resolver?url=api.example.com/newsletter
     const { data } = await axios({
       url,
       method: "post",
-      data: { email },
-      headers: {
-        //   Authorization: `Bearer token`,
-      },
+      data: { email,name },
+    
     });
     return data;
   } catch (error) {
