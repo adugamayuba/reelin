@@ -21,7 +21,7 @@ async function postNewsLetter({ email }) {
 }
 async function postWaitList({ email,name }) {
   try {
-    const url = resolveUrl(`${baseURL}/waitlist`);
+    const url = `${baseURL}/waitlist`;
     // url=/api/resolver?url=api.example.com/newsletter
     const { data } = await axios({
       url,

@@ -18,7 +18,7 @@ const WaitlistPage = () => {
     }
   
     const resp = postWaitList(data).then((res) => {
-      console.log(res?.status);
+      console.log(res);
       setLoading(false);
       setEmail("");
       toast.success("Successfully Joined")
