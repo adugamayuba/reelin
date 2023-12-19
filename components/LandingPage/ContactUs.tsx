@@ -31,14 +31,14 @@ const ContactUs = () => {
         <div className="w-full flex flex-col flow-hide ">
           {/* left side */}
           <div
-            className="w-full lg:w-1/2 mx-auto flex flex-col mt-8 lg:mt-0 bg-white p-12 flow-hide"
+            className="w-full lg:w-1/2 mx-auto flex flex-col mt-8 lg:mt-0 bg-white rounded-[8px] p-12 flow-hide"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
             <h1 className="text-customBlack text-center font-semibold text-2xl lg:text-[36px] lg:leading-[120%] mb-4">
               Contact Us Today
             </h1>
-            <p className="text-sm sm:text-lg text-ash lg:text-lg w-full lg:w-10/12 text-center">
+            <p className="text-sm sm:text-lg text-ash lg:text-lg w-full lg:w-10/12 text-center mx-auto">
               Have questions or need assistance? We're here to help.
             </p>
             <div className="flex flex-col mt-6 w-full lg:w-10/12 space-y-5 mx-auto">
@@ -71,7 +71,7 @@ const ContactUs = () => {
                 />
               </div>
             </div>
-            <button className="w-10/12 mx-auto h-[48px]  py-6 bg-[#0e0e0e] hover:bg-[#0047A7] text-white flex items-center justify-center rounded-[8px] mt-[48px] cursor-pointer " onClick={handlePost}>
+            <button className="w-10/12 mx-auto h-[48px]  py-6 bg-[#0e0e0e] hover:bg-[#0047A7] text-white flex items-center justify-center rounded-[6px] mt-[48px] cursor-pointer " onClick={handlePost}>
               {loading ? "Loading..." : "Send"}
             </button>
           </div>

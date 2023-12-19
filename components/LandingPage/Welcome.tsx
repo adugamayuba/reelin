@@ -18,7 +18,7 @@ const Welcome = () => {
         />
       </div>
 
-      <div className="w-full blue-bg  mt-[10px] flow-hide ">
+      <div className="w-full blue-bg  mt-[10px] flow-hide m ">
         <ContainerLayout>
           <div className="w-full flex flex-col items-center flow-hide lg:min-h-[648px] py-4 lg:py-0 justify-center  ">
             <h1

@@ -17,9 +17,9 @@ const Why = () => {
           <h1 className="text-customBlack text-[28px] md:text-[40px] 2xl:text-[56px] font-bold text-center ">
             Why Choose Reelin?
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-6 flow-hide">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-6 flow-hide max-w-[1272px] mx-auto">
             {/* start of a grid */}
-            <div className="w-full bg-[#35C8BF] rounded-[8px]  flex flex-col pt-6 pb-4">
+            <div className="w-full bg-[#35C8BF] max-w-[408px] min-h-[514px] rounded-[8px]  flex flex-col pt-6 pb-4">
               <h1 className="text-white text-2xl font-bold px-6 ">
                 AI-Powered Analytics
               </h1>
@@ -33,7 +33,7 @@ const Why = () => {
             </div>
             {/* end of a grid */}
             {/* start of a grid */}
-            <div className="w-full bg-[#4679EF] rounded-[8px]  flex flex-col pt-6 pb-4">
+            <div className="w-full bg-[#4679EF] max-w-[408px] min-h-[514px] rounded-[8px]  flex flex-col pt-6 pb-4">
               <h1 className="text-white text-2xl font-bold px-6 ">
                 Real-time Insights
               </h1>
@@ -47,7 +47,7 @@ const Why = () => {
             </div>
             {/* end of a grid */}
             {/* start of a grid */}
-            <div className="w-full bg-[#8265F6] rounded-[8px]  flex flex-col pt-6 ">
+            <div className="w-full bg-[#8265F6] max-w-[408px] min-h-[514px] rounded-[8px]  flex flex-col pt-6 ">
               <h1 className="text-white text-2xl font-bold px-6 ">
                 Actionable Intelligence
               </h1>

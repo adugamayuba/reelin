@@ -52,21 +52,20 @@ const terms = [
 ];
 const Footer = () => {
     return (
-      <div className="w-full flex lg:flex flex-col bg-customBlack flow-hide">
-        <div className="w-full flow-hide ">
+      <div className="w-full flex lg:flex flex-col py-[120px] bg-customBlack flow-hide">
+        <div className="w-full  ">
           <ContainerLayout>
-            <div
-              className="w-full flex flex-col flow-hide"
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
+            <div className="w-full flex flex-col flow-hide">
               {/* uper session */}
-              <div className="w-full flex lg:flex-row flex-col lg:justify-between my-20">
-                <div className="w-full lg:w-3/12 flex flex-col">
-                  <WhiteLogo />
-                  <p className="text-white lg:w-full text-sm mt-4">
-                    Empowering businesses with AI powered operational and
-                    financial tools.
+              <div className="w-full flex lg:flex-row flex-col lg:justify-between mb-20 lg:items-start ">
+                <div className="w-full lg:w-3/12 flex flex-col justify-start ">
+                  <span className="mt-[-66px]">
+                    <WhiteLogo />
+                  </span>
+                  <p className="text-white lg:w-full text-sm  max-w-[358px] mt-[-32px]">
+                    Your all-in-one solution for intelligent financial
+                    management. Gain clarity, control, and confidence in your
+                    finances
                   </p>
                   {/* <div className="mt-6 flex space-x-2 items-center">
                     <p className="text-[#ebebeb] text-base font-medium ">
@@ -179,14 +178,10 @@ const Footer = () => {
             </div>
           </ContainerLayout>
         </div>
-        <div
-          className="w-full flex bg-customBlack flow-hide "
-          data-aos="fade-up"
-          data-aos-duration="2000"
-        >
+        <div className="w-full flex bg-customBlack flow-hide ">
           <ContainerLayout>
-            <div className="w-full flex lg:flex-row flex-col-reverse lg:justify-between lg:items-center py-4 lg:py-0 lg:h-20 border-t border-t-white">
-              <p className="text-sm lg:text-sm text-[#fff] text-center lg:text-start">
+            <div className="w-full flex lg:flex-row flex-col-reverse lg:justify-between lg:items-center py-4 lg:py-0 lg:h-20 border-opacity-50 border-t-white border-t-[0.5px]">
+              <p className="text-sm lg:text-sm text-[#fff] text-opacity-50 text-center lg:text-start">
                 Copyright © 2023 Reelin.finance All Rights Reserved
               </p>
               <div className="hidden lg:flex">
@@ -194,7 +189,7 @@ const Footer = () => {
                 <span>
                   <Link
                     href="#"
-                    className="text-sm lg:text-sm text-white  mr-1 ml-1"
+                    className="text-sm lg:text-sm text-white text-opacity-50  mr-1 ml-1"
                   >
                     Terms and Conditions
                   </Link>
@@ -203,7 +198,7 @@ const Footer = () => {
                 <span>
                   <Link
                     href="#"
-                    className="text-sm lg:text-sm text-white  ml-1"
+                    className="text-sm lg:text-sm text-white text-opacity-50  ml-1"
                   >
                     Privacy Policy
                   </Link>

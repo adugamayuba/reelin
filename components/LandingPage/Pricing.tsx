@@ -136,7 +136,7 @@ const Pricing = () => {
               </div>
               <Link
                 href="/"
-                className="w-full border border-[#E6EAEE] rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
+                className="w-full hover:bg-white hover:text-black border border-[#E6EAEE] rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
               >
                 View Pricing
               </Link>
@@ -149,7 +149,7 @@ const Pricing = () => {
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              <h1 className="text-[#828282] text-sm sm:text-lg font-semibold">
+              <h1 className="text-white text-opacity-50 text-sm sm:text-lg font-semibold">
                 PRO
               </h1>
               <h1 className="sm:mt-6 mt-4 text-white font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
@@ -167,8 +167,10 @@ const Pricing = () => {
                       {item.tick === 3 && <WhiteTick />}
                       <p
                         className={`text-base ${
-                          item.tick === 2 ? "text-[#828282]" : "text-white"
-                        }`}
+                          item.tick === 2
+                            ? "text-white text-opacity-70"
+                            : "text-white"
+                        } font-[300]`}
                       >
                         {item.name}
                       </p>
@@ -178,7 +180,7 @@ const Pricing = () => {
               </div>
               <Link
                 href="/"
-                className="w-full border border-[#E6EAEE] rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
+                className="w-full border border-[#E6EAEE] hover:bg-white hover:text-black rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
               >
                 View Pricing
               </Link>
@@ -220,7 +222,7 @@ const Pricing = () => {
               </div>
               <Link
                 href="/"
-                className="w-full border border-[#E6EAEE] rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
+                className="w-full hover:bg-white hover:text-black border border-[#E6EAEE] rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
               >
                 View Pricing
               </Link>

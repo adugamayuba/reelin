@@ -13,8 +13,8 @@ const Hero = () => {
           data-aos="zoom-in"
           data-aos-duration="2000"
         >
-          <h1 className="font-bold text-customBlack text-[28px] sm:text-[32px] lg:text-[56px] 2xl:text-[80px] text-center lg:w-11/12 2xl:w-11/12 2xl:leading-[88px] block mt-8 2xl:mt-[100px] tracking-[-2%]">
-            Unlock a Deeper Understanding of your Business with Reelin
+          <h1 className="font-bold text-customBlack text-[28px] sm:text-[32px] lg:text-[56px] 2xl:text-[80px] text-center lg:w-11/12 2xl:w-11/12 xl:leading-[60px] block mt-8 xl:mt-[150px] tracking-[-2%]  mx-auto 2xl:leading-[88px]">
+            Unlock a Deeper Understanding <br /> of your Business with Reelin
           </h1>
           <p className="xl:text-2xl  text-customBlack font-light text-center mt-6 ">
             Empowering businesses with AI powered operational and financial
