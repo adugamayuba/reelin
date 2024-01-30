@@ -15,7 +15,7 @@ const MobileNav = ({present} : any ) => {
     const router = useRouter();
     return (
       <div>
-        <div className="w-full bg-white pt-4 fixed top-0 nav-index  left-0 right-0 flex flex-col md:hidden overflow-x-hidden">
+        <div className="w-full bg-[#CFDBE3] pt-4 fixed top-0 nav-index  left-0 right-0 flex flex-col md:hidden overflow-x-hidden">
           <div className="w-full flex items-center justify-between px-4 h-[65px]">
             <Link href="/">
               <BlackLogo />
@@ -72,12 +72,10 @@ const MobileNav = ({present} : any ) => {
                 <div className="w-full flex items-center space-x-4 pt-20 ">
                   <Link
                     href="/waitlist"
-                 
                     className="w-auto  px-8 py-4 border border-customBlack text-customBlack flex items-center justify-center rounded-[6px] "
                   >
                     Join waitlist
                   </Link>
-                
                 </div>
               </div>
             </div>

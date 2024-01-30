@@ -1,34 +1,42 @@
-import React from 'react'
+
 import ContainerLayout from '../../Layouts/ContainerLayout'
-import { BiSearch } from "react-icons/bi"
+
 import Image from 'next/image'
-import heropic from "../../assets/svg/hero-photo.svg"
+
 import Link from 'next/link'
+import heroMini from "../../assets/png/hero-mini.png";
+import home from "../../assets/png/Home.png"
 const Hero = () => {
   return (
-    <div className="w-full fine-bg py-24 flow-hide ">
+    <div className="w-full  pt-40 pb-20 lg:py-40 flow-hide  bg-greyish">
       <ContainerLayout>
-        <div
-          className=" flex flex-col items-center flow-hide"
-          data-aos="zoom-in"
-          data-aos-duration="2000"
-        >
-          <h1 className="font-bold text-customBlack text-[28px] sm:text-[32px] lg:text-[56px] 2xl:text-[80px] text-center lg:w-11/12 2xl:w-11/12 xl:leading-[60px] block mt-8 xl:mt-[150px] tracking-[-2%]  mx-auto 2xl:leading-[88px]">
-            Unlock a Deeper Understanding <br /> of your Business with Reelin
-          </h1>
-          <p className="xl:text-2xl  text-customBlack font-light text-center mt-6 ">
-            Empowering businesses with AI powered operational and financial
-            tools
-          </p>
-          <div className="mt-12 mx-auto">
-            <Link
-              href="/waitlist"
-              // target="_blank"
-              // rel="noopener noreferrer"
-              className="w-auto  px-8 py-4 bg-[#0e0e0e] hover:bg-[#0047A7] text-white flex items-center justify-center rounded-[6px]"
-            >
-              Get Started
-            </Link>
+        <div className="w-full flex-col lg:flex-row flex lg:justify-between">
+          <div className="w-full lg:w-5/12 flex flex-col">
+            <h1 className="text-[#050505] font-bold text-4xl lg:text-[64px] max-w-[565px] lg:leading-[70px] tracking-[-1.28px] ">
+              Unlocking Insights, Driving Growth.
+            </h1>
+            <p className="mt-6 text-lg lg:text-[22px] ">
+              Transforming Data into Action for Every Business Decision.
+            </p>
+            <div className="flex  mt-4 lg:mt-[70px] items-center lg:gap-x-10 gap-3">
+              <div className="w-auto">
+                <Image
+                  src={heroMini}
+                  alt=""
+                  width={heroMini?.width}
+                  height={heroMini?.height}
+                />
+              </div>
+              <div>
+                <p className='text-customBlack text-base lg:text-xl  '>
+                  Take a deeper dive into your business data with Reelin and
+                  discover better insight within seconds.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-full lg:w-6/12 mt-10 lg:mt-0">
+            <Image src={home} alt='reelin' />
           </div>
         </div>
       </ContainerLayout>

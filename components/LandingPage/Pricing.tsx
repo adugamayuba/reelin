@@ -1,5 +1,5 @@
 import ContainerLayout from "../../Layouts/ContainerLayout"
-import { BlueTick, GreyTick, WhiteTick } from "../../assets/svg";
+import { BlueTick, GreenTick, GreyTick, WhiteTick } from "../../assets/svg";
 import Link from "next/link";
 const starter = [
   {
@@ -14,18 +14,7 @@ const starter = [
     name: "Cash Flow Forecasting",
     tick: 1,
   },
-  {
-    name: "Dedicated Support",
-    tick: 2,
-  },
-  {
-    name: "Advanced Analytics",
-    tick: 2,
-  },
-  {
-    name: "Integrate with bank",
-    tick: 2,
-  },
+
 ];
 const enterprise = [
   {
@@ -56,19 +45,19 @@ const enterprise = [
 const pro = [
   {
     name: "Advanced Analytics",
-    tick: 3,
+    tick: 1,
   },
   {
     name: "Customized Reporting",
-    tick: 3,
+    tick: 1,
   },
   {
     name: "Integrate with bank",
-    tick: 3,
+    tick: 1,
   },
   {
     name: "Multi-User Collaboration",
-    tick: 2,
+    tick: 1,
   },
   {
     name: "Cash flow forcasting",
@@ -82,7 +71,7 @@ const pro = [
 
 const Pricing = () => {
   return (
-    <div className="w-full bg-customBlack py-[120px]" id="pricing">
+    <div className="w-full bg-[#2B2E2F] py-[120px]" id="pricing">
       <ContainerLayout>
         <div className="w-full flex flex-col items-center flow-hide">
           <h1
@@ -103,14 +92,14 @@ const Pricing = () => {
           <div className="mt-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full flow-hide">
             {/* start of a grid */}
             <div
-              className="w-full flex flex-col p-8 rounded-[8px] bg-[#171717] "
+              className="w-full flex flex-col p-8 relative rounded-[8px] bg-greyish "
               data-aos="fade-down"
               data-aos-duration="2000"
             >
               <h1 className="text-[#828282] text-sm sm:text-lg font-semibold">
                 Starter
               </h1>
-              <h1 className="sm:mt-6 mt-4 text-white font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
+              <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
                 $2.99
               </h1>
               <h1 className="text-[#828282] text-sm sm:text-lg font-semibold mt-4">
@@ -120,12 +109,13 @@ const Pricing = () => {
                 {starter?.map((item: any, index: number) => {
                   return (
                     <div className="flex space-x-3 items-center" key={index}>
-                      {item.tick === 1 && <BlueTick />}
-                      {item.tick === 2 && <GreyTick />}
-                      {item.tick === 3 && <WhiteTick />}
+                      {item.tick === 1 && <GreenTick />}
+
                       <p
                         className={`text-base ${
-                          item.tick === 2 ? "text-[#828282]" : "text-white"
+                          item.tick === 2
+                            ? "text-[#828282]"
+                            : "text-customBlack"
                         }`}
                       >
                         {item.name}
@@ -134,28 +124,31 @@ const Pricing = () => {
                   );
                 })}
               </div>
+              <div className=" w-full absolute bottom-0 left-0 right-0 p-8">
+
               <Link
                 href="/"
-                className="w-full hover:bg-white hover:text-black border border-[#E6EAEE] rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
-              >
+                className="w-full hover:bg-customBlack  border-[2px] border-customBlack rounded-[6px] py-4 px-8 text-customBlack text-base block text-center hover:text-white "
+                >
                 View Pricing
               </Link>
+                </div>
             </div>
 
             {/* end of a grid */}
             {/* start of a grid */}
             <div
-              className="w-full flex flex-col p-8 rounded-[8px] bg-[#0047A7] "
+              className="w-full flex flex-col p-8 rounded-[8px] bg-[#D5FD89] "
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              <h1 className="text-white text-opacity-50 text-sm sm:text-lg font-semibold">
+              <h1 className="text-customBlack text-opacity-50 text-sm sm:text-lg font-semibold">
                 PRO
               </h1>
-              <h1 className="sm:mt-6 mt-4 text-white font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
+              <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
                 $9.99
               </h1>
-              <h1 className="text-white text-sm sm:text-lg font-semibold mt-4">
+              <h1 className="text-customBlack text-sm sm:text-lg font-semibold mt-4">
                 PER MONTH
               </h1>
               <div className="mt-12 flex flex-col space-y-3">
@@ -168,8 +161,8 @@ const Pricing = () => {
                       <p
                         className={`text-base ${
                           item.tick === 2
-                            ? "text-white text-opacity-70"
-                            : "text-white"
+                            ? "text-customBlack text-opacity-70"
+                            : "text-customBlack"
                         } font-[300]`}
                       >
                         {item.name}
@@ -180,7 +173,7 @@ const Pricing = () => {
               </div>
               <Link
                 href="/"
-                className="w-full border border-[#E6EAEE] hover:bg-white hover:text-black rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
+                className="w-full  border-customBlack hover:bg-white hover:text-black rounded-[6px] py-4 px-8 text-customBlack text-base mt-24 text-center border-[2px] "
               >
                 View Pricing
               </Link>
@@ -189,29 +182,27 @@ const Pricing = () => {
             {/* end of a grid */}
             {/* start of a grid */}
             <div
-              className="w-full flex flex-col p-8 rounded-[8px] bg-[#171717] "
+              className="w-full flex flex-col p-8 rounded-[8px] bg-greyish "
               data-aos="fade-down"
               data-aos-duration="2000"
             >
               <h1 className="text-[#828282] text-sm sm:text-lg font-semibold">
                 ENTERPRISE
               </h1>
-              <h1 className="sm:mt-6 mt-4 text-white font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
+              <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
                 $49.99
               </h1>
-              <h1 className="text-[#828282] text-sm sm:text-lg font-semibold mt-4">
+              <h1 className="text-customBlack text-sm sm:text-lg font-semibold mt-4">
                 PER MONTH
               </h1>
               <div className="mt-12 flex flex-col space-y-3">
                 {enterprise?.map((item: any, index: number) => {
                   return (
                     <div className="flex space-x-3 items-center" key={index}>
-                      {item.tick === 1 && <BlueTick />}
-                      {item.tick === 2 && <GreyTick />}
-                      {item.tick === 3 && <WhiteTick />}
+                      {item.tick === 1 && <GreenTick />}
                       <p
                         className={`text-base ${
-                          item.tick === 2 ? "text-[#828282]" : "text-white"
+                          item.tick === 1 ? "text-customBlack" : "text-customBlack"
                         }`}
                       >
                         {item.name}
@@ -222,7 +213,7 @@ const Pricing = () => {
               </div>
               <Link
                 href="/"
-                className="w-full hover:bg-white hover:text-black border border-[#E6EAEE] rounded-[6px] py-4 px-8 text-white text-base mt-24 text-center "
+                className="w-full hover:bg-white hover:text-white text-customBlack  border-customBlack border-[2px] rounded-[6px] py-4 px-8  text-base mt-24 text-center "
               >
                 View Pricing
               </Link>

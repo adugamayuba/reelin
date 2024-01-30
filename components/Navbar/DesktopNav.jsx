@@ -10,7 +10,7 @@ const Navbar = () => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed top-0 right-0 left-0 z-high w-full h-[85px]  items-center nav-styl hidden md:flex bg-white">
+    <div className="fixed top-0 right-0 left-0 z-high w-full h-[85px]  items-center nav-styl hidden md:flex bg-[#CFDBE3]">
       <ContainerLayout>
         <div className="w-full flex justify-between items-center mt-4">
           <div className="w-fit">
