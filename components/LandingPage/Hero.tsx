@@ -15,9 +15,9 @@ const Hero = () => {
             <h1 className="text-[#050505] font-bold text-4xl lg:text-[64px] max-w-[565px] lg:leading-[70px] tracking-[-1.28px] ">
               Unlocking Insights, Driving Growth.
             </h1>
-            <p className="mt-6 text-lg lg:text-[22px] ">
+            {/* <p className="mt-6 text-lg lg:text-[22px] ">
               Transforming Data into Action for Every Business Decision.
-            </p>
+            </p> */}
             <div className="flex  mt-4 lg:mt-[70px] items-center lg:gap-x-10 gap-3">
               <div className="w-auto">
                 <Image
