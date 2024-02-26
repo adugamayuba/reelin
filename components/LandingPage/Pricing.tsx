@@ -100,7 +100,7 @@ const Pricing = () => {
                 Starter
               </h1>
               <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
-                $2.99
+                $9.99
               </h1>
               <h1 className="text-[#828282] text-sm sm:text-lg font-semibold mt-4">
                 PER MONTH
@@ -124,7 +124,7 @@ const Pricing = () => {
                   );
                 })}
               </div>
-              <div className=" w-full absolute bottom-0 left-0 right-0 p-8">
+              <div className=" w-full lg:absolute lg:bottom-0 lg:left-0 lg:right-0 lg:p-8 mt-24">
 
               <Link
                 href="/"
@@ -146,7 +146,7 @@ const Pricing = () => {
                 PRO
               </h1>
               <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
-                $9.99
+                $249.99
               </h1>
               <h1 className="text-customBlack text-sm sm:text-lg font-semibold mt-4">
                 PER MONTH
