@@ -19,6 +19,7 @@ module.exports = {
         deepBlue: "#020E20",
         customBlack: "#050505",
         greyish: "#CFDBE3",
+        background:'#2B2E2F',
         
         neutral: {
           500: "#5E5E5E",

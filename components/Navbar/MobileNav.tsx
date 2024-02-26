@@ -27,7 +27,7 @@ const MobileNav = ({present} : any ) => {
           </div>
 
           {show && (
-            <div className="bg-white w-full flex flex-col items-center z-100 transition-all duration-1000 delay-1000 h-[90vh] ">
+            <div className="bg-greyish w-full flex flex-col items-center z-100 transition-all duration-1000 delay-1000 h-[90vh] ">
               <div className="flex flex-col w-full px-4 mt-8 space-y-4">
                 <div className="w-full py-2 " onClick={() => setShow(false)}>
                   <Link

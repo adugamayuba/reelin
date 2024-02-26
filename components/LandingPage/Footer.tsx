@@ -1,13 +1,11 @@
 import React from 'react'
 import ContainerLayout from '../../Layouts/ContainerLayout'
-import Image from 'next/image'
-import logo from "../../assets/svg/group-logo.svg";
 import Link from 'next/link';
 import { LinkedIn,Twitter,Instagram,Facebook } from '../../assets/svg';
-import { BiEnvelope } from "react-icons/bi"
-import { BsTelephone } from "react-icons/bs"
-import {HiOutlineLocationMarker} from "react-icons/hi"
-import { ArrowRight, WhiteLogo } from '../../assets/svg';
+import { WhiteLogo } from '../../assets/svg';
+import bigLogo from "../../assets/png/big-logo.png"
+import Image from 'next/image';
+
 const navigation = [
   {
     url: "#why",
@@ -52,7 +50,7 @@ const terms = [
 ];
 const Footer = () => {
     return (
-      <div className="w-full flex lg:flex flex-col py-[120px] bg-customBlack flow-hide">
+      <div className="w-full flex lg:flex flex-col py-[120px] bg-background flow-hide">
         <div className="w-full  ">
           <ContainerLayout>
             <div className="w-full flex flex-col flow-hide">
@@ -176,13 +174,16 @@ const Footer = () => {
               </div>
               {/* lower session */}
             </div>
+            <div className="my-6 w-full ">
+              <Image src={bigLogo} alt="big" />
+            </div>
           </ContainerLayout>
         </div>
-        <div className="w-full flex bg-customBlack flow-hide ">
+        <div className="w-full flex bg-background flow-hide ">
           <ContainerLayout>
-            <div className="w-full flex lg:flex-row flex-col-reverse lg:justify-between lg:items-center py-4 lg:py-0 lg:h-20 border-opacity-50 border-t-white border-t-[0.5px]">
-              <p className="text-sm lg:text-sm text-[#fff] text-opacity-50 text-center lg:text-start">
-                Copyright © 2023 Reelin.finance All Rights Reserved
+            <div className="w-full flex lg:flex-row flex-col-reverse lg:justify-between lg:items-center py-4 lg:py-0 lg:h-20 border-opacity-50 ">
+              <p className="text-sm lg:text-sm text-[#929292] text-opacity-50 text-center lg:text-start">
+                Copyright © 2024 Reelin.finance All Rights Reserved
               </p>
               <div className="hidden lg:flex">
                 <p className="text-sm lg:text-sm text-[#fff]"></p>
