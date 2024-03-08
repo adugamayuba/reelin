@@ -146,7 +146,7 @@ const Pricing = () => {
                 PRO
               </h1>
               <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
-                $49.99
+                $24.99
               </h1>
               <h1 className="text-customBlack text-sm sm:text-lg font-semibold mt-4">
                 PER MONTH
