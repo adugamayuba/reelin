@@ -27,7 +27,7 @@ const Welcome = () => {
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              Gain Clarity, control,and confidence in your finances
+              Gain Clarity, Control, and Confidence in Your E-Commerce Finances.
             </p>
 
             <div
@@ -36,12 +36,12 @@ const Welcome = () => {
               data-aos-duration="2000"
             >
               <Link
-                href="#"
-                // target="_blank"
-                // rel="noopener noreferrer"
+                href="https://demo.reelin.ai/register"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-auto  px-8 py-4 bg-[#D5FD89] text-customBlack flex items-center justify-center rounded-[6px] hover:border-white hover:border hover:text-white hover:bg-transparent "
               >
-                Get Started
+                Start free trial
               </Link>
             </div>
           </div>

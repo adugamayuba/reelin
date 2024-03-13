@@ -59,7 +59,8 @@ const Footer = () => {
                 </span>
                 <p className="text-white lg:w-full text-sm  max-w-[358px] mt-[-32px]">
                   Your all-in-one solution for intelligent financial management.
-                  Gain clarity, control, and confidence in your finances
+                  Gain clarity, control, and confidence in your e-commerce
+                  finances.
                 </p>
                 {/* <div className="mt-6 flex space-x-2 items-center">
                     <p className="text-[#ebebeb] text-base font-medium ">

@@ -24,11 +24,15 @@ const Why = () => {
                 AI-Powered Analytics
               </h1>
               <p className="text-customBlack mt-4 text-lg font-light px-6">
-                A unified platform that seamlessly combines AI-driven insights
-                and analytics.
+                Seamlessly combine AI-driven insights and analytics tailored for
+                e-commerce merchants.
               </p>
               <div className="w-full flex justify-end absolute bottom-0 right-0 ">
-                <Image src={ana} alt="analytics reelin" className="w-[300px] h-auto" />
+                <Image
+                  src={ana}
+                  alt="analytics reelin"
+                  className="w-[300px] h-auto"
+                />
               </div>
             </div>
             {/* end of a grid */}
@@ -42,7 +46,11 @@ const Why = () => {
                 keeping you informed at all times.
               </p>
               <div className="w-full flex justify-end absolute right-0 bottom-0 ">
-                <Image src={expense} alt="analytics reelin" className="w-[300px] h-auto" />
+                <Image
+                  src={expense}
+                  alt="analytics reelin"
+                  className="w-[300px] h-auto"
+                />
               </div>
             </div>
             {/* end of a grid */}
@@ -56,19 +64,23 @@ const Why = () => {
                 decision-making.
               </p>
               <div className="w-full absolute flex justify-end right-0 bottom-0 ">
-                <Image src={cash} alt="analytics reelin" className="w-[230px] h-auto" />
+                <Image
+                  src={cash}
+                  alt="analytics reelin"
+                  className="w-[230px] h-auto"
+                />
               </div>
             </div>
             {/* end of a grid */}
           </div>
           <div className="mx-auto mt-[60px]">
             <Link
-              href="#why"
-              // target="_blank"
-              // rel="noopener noreferrer"
+              href="https://demo.reelin.ai/register"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-auto  px-8 py-4  text-customBlack font-bold flex items-center bg-greyish justify-center rounded-[6px]  hover:bg-[#0047A7] hover:text-white hover:border-none"
             >
-              Explore Features
+              Start free trial
             </Link>
           </div>
         </div>

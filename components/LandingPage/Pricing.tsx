@@ -1,4 +1,4 @@
-import ContainerLayout from "../../Layouts/ContainerLayout"
+import ContainerLayout from "../../Layouts/ContainerLayout";
 import { BlueTick, GreenTick, GreyTick, WhiteTick } from "../../assets/svg";
 import Link from "next/link";
 const starter = [
@@ -14,33 +14,42 @@ const starter = [
     name: "Cash Flow Forecasting",
     tick: 1,
   },
-
+  {
+    name: "Access to Shopify Integration ",
+    tick: 1,
+  },
+  {
+    name: "Access to Plaid Integration ",
+    tick: 1,
+  },
+  {
+    name: "AI Assistant ",
+    tick: 1,
+  },
 ];
+
 const enterprise = [
   {
-    name: "Predictive Intelligence",
+    name: "Dedicated Account Manager",
     tick: 1,
   },
   {
-    name: "Dedicated Support",
+    name: "Integration with Additional Data Sources",
     tick: 1,
   },
   {
-    name: "Multi-User Collaboration",
+    name: "Advanced Cash Flow Forecasting with Scenario Planning",
     tick: 1,
   },
   {
-    name: "Cash Flow Forecasting",
+    name: "Custom AI Assistant with Industry-Specific Insights and Recommendations",
     tick: 1,
   },
   {
-    name: "Advanced Analytics",
+    name: "Advanced Insights & Analytics",
     tick: 1,
   },
-  {
-    name: "Customized Reporting",
-    tick: 1,
-  },
+
 ];
 const pro = [
   {
@@ -51,20 +60,21 @@ const pro = [
     name: "Customized Reporting",
     tick: 1,
   },
-  {
-    name: "Integrate with bank",
-    tick: 1,
-  },
+
   {
     name: "Multi-User Collaboration",
     tick: 1,
   },
   {
-    name: "Cash flow forcasting",
-    tick: 2,
+    name: "Cash flow forecasting",
+    tick: 1,
   },
   {
     name: "Predictive Insight",
+    tick: 1,
+  },
+  {
+    name: "Plus Everything in Starter",
     tick: 2,
   },
 ];
@@ -86,7 +96,7 @@ const Pricing = () => {
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            Choose the plan that suits your business needs. We offer Starter,
+            Choose the plan that suits your e-commerce needs. We offer Starter,
             Pro, and Enterprise plans.
           </p>
           <div className="mt-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full flow-hide">
@@ -100,7 +110,7 @@ const Pricing = () => {
                 Starter
               </h1>
               <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
-                $9.99
+                $24.99
               </h1>
               <h1 className="text-[#828282] text-sm sm:text-lg font-semibold mt-4">
                 PER MONTH
@@ -125,14 +135,15 @@ const Pricing = () => {
                 })}
               </div>
               <div className=" w-full lg:absolute lg:bottom-0 lg:left-0 lg:right-0 lg:p-8 mt-24">
-
-              <Link
-                href="/"
-                className="w-full hover:bg-customBlack  border-[2px] border-customBlack rounded-[6px] py-4 px-8 text-customBlack text-base block text-center hover:text-white "
+                <Link
+                  href="https://demo.reelin.ai/register"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full hover:bg-customBlack  border-[2px] border-customBlack rounded-[6px] py-4 px-8 text-customBlack text-base block text-center hover:text-white "
                 >
-                View Pricing
-              </Link>
-                </div>
+                  Start free trial
+                </Link>
+              </div>
             </div>
 
             {/* end of a grid */}
@@ -146,7 +157,7 @@ const Pricing = () => {
                 PRO
               </h1>
               <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
-                $24.99
+                $49.99
               </h1>
               <h1 className="text-customBlack text-sm sm:text-lg font-semibold mt-4">
                 PER MONTH
@@ -172,10 +183,12 @@ const Pricing = () => {
                 })}
               </div>
               <Link
-                href="/"
-                className="w-full  border-customBlack hover:bg-white hover:text-black rounded-[6px] py-4 px-8 text-customBlack text-base mt-24 text-center border-[2px] "
+                href="https://demo.reelin.ai/register"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full  border-customBlack hover:bg-white hover:text-black rounded-[6px] py-4 px-8 text-customBlack text-base mt-28 text-center border-[2px] "
               >
-                View Pricing
+                Start free trial
               </Link>
             </div>
 
@@ -190,10 +203,10 @@ const Pricing = () => {
                 ENTERPRISE
               </h1>
               <h1 className="sm:mt-6 mt-4 text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
-                $49.99
+                Custom
               </h1>
               <h1 className="text-customBlack text-sm sm:text-lg font-semibold mt-4">
-                PER MONTH
+                SPEAK TO SALES
               </h1>
               <div className="mt-12 flex flex-col space-y-3">
                 {enterprise?.map((item: any, index: number) => {
@@ -202,7 +215,9 @@ const Pricing = () => {
                       {item.tick === 1 && <GreenTick />}
                       <p
                         className={`text-base ${
-                          item.tick === 1 ? "text-customBlack" : "text-customBlack"
+                          item.tick === 1
+                            ? "text-customBlack"
+                            : "text-customBlack"
                         }`}
                       >
                         {item.name}
@@ -212,10 +227,12 @@ const Pricing = () => {
                 })}
               </div>
               <Link
-                href="/"
-                className="w-full hover:bg-white hover:text-white text-customBlack  border-customBlack border-[2px] rounded-[6px] py-4 px-8  text-base mt-24 text-center "
+                href="mailto:sales@reelin.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full hover:bg-black hover:text-white text-customBlack  border-customBlack border-[2px] rounded-[6px] py-4 px-8  text-base mt-24 text-center "
               >
-                View Pricing
+                Contact Sales
               </Link>
             </div>
 
@@ -225,6 +242,6 @@ const Pricing = () => {
       </ContainerLayout>
     </div>
   );
-}
+};
 
-export default Pricing
+export default Pricing;

@@ -1,11 +1,10 @@
+import ContainerLayout from "../../Layouts/ContainerLayout";
 
-import ContainerLayout from '../../Layouts/ContainerLayout'
+import Image from "next/image";
 
-import Image from 'next/image'
-
-import Link from 'next/link'
+import Link from "next/link";
 import heroMini from "../../assets/png/hero-mini.png";
-import home from "../../assets/png/Home.png"
+import home from "../../assets/png/Home.png";
 const Hero = () => {
   return (
     <div className="w-full  pt-40 pb-20 lg:py-40 flow-hide  bg-greyish">
@@ -16,7 +15,8 @@ const Hero = () => {
               Unlocking Insights, Driving Growth.
             </h1>
             <p className="mt-6 text-lg lg:text-[22px] ">
-              Transforming Data into Action for Every Business Decision.
+              Transforming Data into Actionable Insight for Everyday Business
+              Decision.
             </p>
             <div className="flex  mt-4 lg:mt-[70px] items-center lg:gap-x-10 gap-3">
               <div className="w-auto">
@@ -28,20 +28,20 @@ const Hero = () => {
                 />
               </div>
               <div>
-                <p className='text-customBlack text-base lg:text-xl  '>
-                  Take a deeper dive into your business data with Reelin and
-                  discover better insight within seconds.
+                <p className="text-customBlack text-base lg:text-xl  ">
+                  Take a deeper dive into your e-commerce finances with Reelin
+                  and discover actionable insights within seconds.
                 </p>
               </div>
             </div>
           </div>
           <div className="w-full lg:w-6/12 mt-10 lg:mt-0">
-            <Image src={home} alt='reelin' />
+            <Image src={home} alt="reelin" />
           </div>
         </div>
       </ContainerLayout>
     </div>
   );
-}
+};
 
-export default Hero
+export default Hero;
