@@ -75,12 +75,13 @@ const Why = () => {
           </div>
           <div className="mx-auto mt-[60px]">
             <Link
-              href="https://demo.reelin.ai/register"
-              target="_blank"
-              rel="noopener noreferrer"
+              // href="https://demo.reelin.ai/register"
+              // target="_blank"
+              // rel="noopener noreferrer"
+              href={"/waitlist"}
               className="w-auto  px-8 py-4  text-customBlack font-bold flex items-center bg-greyish justify-center rounded-[6px]  hover:bg-[#0047A7] hover:text-white hover:border-none"
             >
-              Start free trial
+              Join Waitlist
             </Link>
           </div>
         </div>

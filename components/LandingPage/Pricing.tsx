@@ -136,12 +136,13 @@ const Pricing = () => {
               </div>
               <div className=" w-full lg:absolute lg:bottom-0 lg:left-0 lg:right-0 lg:p-8 mt-24">
                 <Link
-                  href="https://demo.reelin.ai/register"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/waitlist"
+                  // href="https://demo.reelin.ai/register"
+                  // target="_blank"
+                  // rel="noopener noreferrer"
                   className="w-full hover:bg-customBlack  border-[2px] border-customBlack rounded-[6px] py-4 px-8 text-customBlack text-base block text-center hover:text-white "
                 >
-                  Start free trial
+                  Join Waitlist
                 </Link>
               </div>
             </div>
@@ -183,12 +184,13 @@ const Pricing = () => {
                 })}
               </div>
               <Link
-                href="https://demo.reelin.ai/register"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={"/waitlist"}
+                // href="https://demo.reelin.ai/register"
+                // target="_blank"
+                // rel="noopener noreferrer"
                 className="w-full  border-customBlack hover:bg-white hover:text-black rounded-[6px] py-4 px-8 text-customBlack text-base mt-28 text-center border-[2px] "
               >
-                Start free trial
+                Join Waitlist
               </Link>
             </div>
 

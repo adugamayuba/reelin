@@ -49,21 +49,22 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="w-fit flex items-center  space-x-4   ">
-            <Link
+            {/* <Link
               href={"https://demo.reelin.ai/login"}
               rel="noopener noreferrer"
               target="_blank"
               className="w-auto  px-8 py-4 hover:bg-[#0047A7] bg-[#0e0e0e] cursor-pointer text-white flex items-center justify-center rounded-[6px]"
             >
               Login
-            </Link>
+            </Link> */}
             <Link
-              href={"https://demo.reelin.ai/register"}
+              // href={"https://demo.reelin.ai/register"}
+              href={"/waitlist"}
               className="w-auto  px-8 py-4 border border-customBlack text-customBlack hover:bg-[#0047A7] hover:text-white flex items-center justify-center rounded-[6px] hover:border-none cursor-pointer"
-              rel="noopener noreferrer"
-              target="_blank"
+              // rel="noopener noreferrer"
+              // target="_blank"
             >
-              Start Free Trial
+              Join Waitlist
             </Link>
           </div>
         </div>
@@ -74,12 +75,13 @@ const Navbar = () => {
             Be the first to know when we launch
           </p>
           <Link
-            href="https://demo.reelin.ai/register"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={"/waitlist"}
+            // href="https://demo.reelin.ai/register"
+            // target="_blank"
+            // rel="noopener noreferrer"
             className="w-auto  px-8 py-4 border border-customBlack text-customBlack font-bold flex items-center justify-center rounded-[6px]  hover:bg-[#0047A7] hover:text-white hover:border-none"
           >
-            Start Free Trial
+            Join Waitlist
           </Link>
         </div>
       </ReUseModal>
