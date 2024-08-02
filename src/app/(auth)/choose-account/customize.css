@@ -1,0 +1,16 @@
+:where(.css-dev-only-do-not-override-1uq9j6g).ant-upload-wrapper
+  .ant-upload-drag
+  .ant-upload {
+  padding: 0 !important;
+}
+:where(.css-dev-only-do-not-override-1uq9j6g).ant-upload-wrapper
+  .ant-upload-drag {
+  position: relative;
+  /* width: 100%; */
+  text-align: center;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px dashed #d9d9d9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}

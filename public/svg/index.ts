@@ -6,3 +6,4 @@ export { default as success } from "./success.svg";
 export { default as checkCircle } from "./check-circle.svg";
 export { default as bankIcon } from "./bank-icon.svg";
 export { default as fileIcon } from "./file-icon.svg";
+export { default as chevron } from "./chevron.svg";
