@@ -34,8 +34,8 @@ export function Squares({
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    // Set canvas background
-    canvas.style.background = "#060606"
+    // Remove the background color setting
+    canvas.style.background = "transparent"
 
     const resizeCanvas = () => {
       canvas.width = canvas.offsetWidth
@@ -73,20 +73,6 @@ export function Squares({
           ctx.strokeRect(squareX, squareY, squareSize, squareSize)
         }
       }
-
-      const gradient = ctx.createRadialGradient(
-        canvas.width / 2,
-        canvas.height / 2,
-        0,
-        canvas.width / 2,
-        canvas.height / 2,
-        Math.sqrt(Math.pow(canvas.width, 2) + Math.pow(canvas.height, 2)) / 2,
-      )
-      gradient.addColorStop(0, "rgba(6, 6, 6, 0)")
-      gradient.addColorStop(1, "#060606")
-
-      ctx.fillStyle = gradient
-      ctx.fillRect(0, 0, canvas.width, canvas.height)
     }
 
     const updateAnimation = () => {
