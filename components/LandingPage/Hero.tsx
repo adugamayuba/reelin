@@ -2,21 +2,34 @@ import ContainerLayout from "../../Layouts/ContainerLayout";
 import Image from "next/image";
 import Link from "next/link";
 import home from "../../assets/png/Home.png";
+import { Squares } from "../../components/Squares";
 
 const Hero = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="w-full bg-[#004225] text-white relative pt-32 pb-48">
+      <div className="w-full bg-[#004225] text-white relative pt-32 pb-48 overflow-hidden">
+        {/* Animated Squares Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <Squares
+            direction="diagonal"
+            speed={0.5}
+            borderColor="rgba(255,255,255,0.1)"
+            squareSize={50}
+            hoverFillColor="rgba(255,255,255,0.1)"
+            className="opacity-50"
+          />
+        </div>
+
         {/* Version Badge */}
-        <div className="absolute top-8 left-1/2 -translate-x-1/2">
+        <div className="absolute top-8 left-1/2 -translate-x-1/2 z-10">
           <div className="px-4 py-2 bg-[#005c34] rounded-full text-sm inline-flex items-center gap-2">
             New Features Available <span className="ml-1">→</span>
           </div>
         </div>
 
         <ContainerLayout>
-          <div className="w-full flex flex-col items-center text-center">
+          <div className="w-full flex flex-col items-center text-center relative z-10">
             {/* Main Content */}
             <div className="max-w-3xl mx-auto">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">

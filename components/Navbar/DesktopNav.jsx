@@ -1,18 +1,30 @@
 import {useState} from "react";
 import ContainerLayout from "../../Layouts/ContainerLayout";
 import { WhiteLogo } from "../../assets/svg";
-
 import { useRouter } from "next/router";
 import ReUseModal from "../modal/ReuseAble";
-
 import Link from "next/link";
+import { Squares } from "../../components/Squares";
+
 const Navbar = () => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed top-0 right-0 left-0 z-high w-full h-20 items-center hidden md:flex bg-[#004225] border-b border-[#005c34]">
+    <div className="fixed top-0 right-0 left-0 z-high w-full h-20 items-center hidden md:flex bg-[#004225] border-b border-[#005c34] overflow-hidden">
+      {/* Animated Squares Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <Squares
+          direction="right"
+          speed={0.3}
+          borderColor="rgba(255,255,255,0.1)"
+          squareSize={30}
+          hoverFillColor="rgba(255,255,255,0.1)"
+          className="opacity-30"
+        />
+      </div>
+
       <ContainerLayout>
-        <div className="w-full flex justify-between items-center h-full">
+        <div className="w-full flex justify-between items-center h-full relative z-10">
           <div className="w-fit">
             <WhiteLogo />
           </div>

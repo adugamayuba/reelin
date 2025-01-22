@@ -2,14 +2,27 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaBars, FaTimes } from "react-icons/fa";
 import { WhiteLogo } from '../../assets/svg';
+import { Squares } from "../../components/Squares";
 
 const MobileNav = () => {
   const [show, setShow] = useState(false);
 
   return (
     <div>
-      <div className="w-full bg-[#004225] fixed top-0 z-50 left-0 right-0 flex flex-col md:hidden border-b border-[#005c34]">
-        <div className="w-full flex items-center justify-between px-4 h-20">
+      <div className="w-full bg-[#004225] fixed top-0 z-50 left-0 right-0 flex flex-col md:hidden border-b border-[#005c34] overflow-hidden">
+        {/* Animated Squares Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <Squares
+            direction="right"
+            speed={0.3}
+            borderColor="rgba(255,255,255,0.1)"
+            squareSize={30}
+            hoverFillColor="rgba(255,255,255,0.1)"
+            className="opacity-30"
+          />
+        </div>
+
+        <div className="w-full flex items-center justify-between px-4 h-20 relative z-10">
           <Link href="/">
             <WhiteLogo />
           </Link>
@@ -27,8 +40,20 @@ const MobileNav = () => {
         </div>
 
         {show && (
-          <div className="bg-[#004225] w-full flex flex-col items-start z-50 h-[calc(100vh-5rem)] overflow-y-auto">
-            <div className="flex flex-col w-full px-4 py-6 space-y-6">
+          <div className="bg-[#004225] w-full flex flex-col items-start z-50 h-[calc(100vh-5rem)] overflow-y-auto relative">
+            {/* Animated Squares Background for Menu */}
+            <div className="absolute inset-0 w-full h-full">
+              <Squares
+                direction="right"
+                speed={0.3}
+                borderColor="rgba(255,255,255,0.1)"
+                squareSize={30}
+                hoverFillColor="rgba(255,255,255,0.1)"
+                className="opacity-30"
+              />
+            </div>
+
+            <div className="flex flex-col w-full px-4 py-6 space-y-6 relative z-10">
               <Link
                 href="#products"
                 className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
