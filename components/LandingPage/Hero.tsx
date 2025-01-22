@@ -69,7 +69,7 @@ const Hero = () => {
       </div>
 
       {/* Spacer div to create room for the overlapped dashboard */}
-      <div className="h-[30vh] bg-gradient-to-br from-[#004225] via-[#005c34] to-[#004225]"></div>
+      <div className="h-[15vh] bg-gradient-to-br from-[#004225] via-[#005c34] to-[#004225]"></div>
     </div>
   );
 };
