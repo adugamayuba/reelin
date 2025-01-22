@@ -53,7 +53,7 @@ const Hero = () => {
       </div>
 
       {/* Spacer div to create room for the overlapped dashboard */}
-      <div className="h-[30vh] bg-white"></div>
+      <div className="h-[30vh] bg-[#004225]"></div>
     </div>
   );
 };
