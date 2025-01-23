@@ -4,15 +4,13 @@ import Link from "next/link";
 import home from "../../assets/png/Home.png";
 import { Squares } from "../../components/Squares";
 import { Button } from "../../components/ui/moving-border";
+import { ContainerScroll } from "../../components/ui/container-scroll-animation";
 
 const Hero = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="w-full relative pb-48 overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#004225] to-[#005c34]" />
-        
+      <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#004225] to-[#005c34]">
         {/* Animated Squares Background */}
         <div className="absolute inset-0 w-full h-full">
           <Squares
@@ -37,7 +35,7 @@ const Hero = () => {
               </p>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
                 <Link href="/waitlist">
                   <Button 
                     borderRadius="1.75rem"
@@ -53,22 +51,30 @@ const Hero = () => {
             </div>
           </div>
         </ContainerLayout>
-      </div>
 
-      {/* Dashboard Preview - Positioned to overlap */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-1/2 w-full max-w-5xl mx-auto px-4">
-        <div className="rounded-lg overflow-hidden shadow-2xl">
-          <Image
-            src={home}
-            alt="Reelin Dashboard"
-            className="w-full h-auto"
-            priority
-          />
+        {/* Dashboard Preview with Scroll Animation */}
+        <div className="relative -mb-20">
+          <ContainerScroll
+            titleComponent={
+              <>
+                <h2 className="text-4xl font-semibold text-white mb-4">
+                  Powerful Analytics at Your Fingertips
+                </h2>
+                <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+                  Get real-time insights and AI-powered forecasting for your Shopify store
+                </p>
+              </>
+            }
+          >
+            <Image
+              src={home}
+              alt="Reelin Dashboard"
+              className="w-full h-full object-cover object-center"
+              priority
+            />
+          </ContainerScroll>
         </div>
       </div>
-
-      {/* Spacer div to create room for the overlapped dashboard */}
-      <div className="h-[30vh] bg-gradient-to-br from-[#004225] to-[#005c34]"></div>
     </div>
   );
 };
