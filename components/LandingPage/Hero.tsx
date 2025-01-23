@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#004225] to-[#005c34]">
+      <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#004225] to-[#005c34] min-h-screen">
         {/* Animated Squares Background */}
         <div className="absolute inset-0 w-full h-full">
           <Squares
@@ -24,23 +24,23 @@ const Hero = () => {
         </div>
 
         <ContainerLayout>
-          <div className="w-full flex flex-col items-center text-center relative z-10 pt-36">
+          <div className="w-full flex flex-col items-center text-center relative z-10 pt-20 lg:pt-24">
             {/* Main Content */}
-            <div className="max-w-3xl mx-auto">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-white">
+            <div className="max-w-4xl mx-auto px-4">
+              <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6 text-white">
                 Your Shopify Store's AI-Powered Command Center
               </h1>
-              <p className="text-lg lg:text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
+              <p className="text-xl lg:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed">
                 Turn your store data into intelligent decisions with AI-driven insights, forecasting, and smart alerts
               </p>
               
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
                 <Link href="/waitlist">
                   <Button 
                     borderRadius="1.75rem"
-                    className="bg-white/80 text-[#004225] text-xl font-semibold hover:scale-105 transition-transform"
-                    containerClassName="!w-[220px] !h-[70px]"
+                    className="bg-white/90 text-[#004225] text-xl font-semibold hover:scale-105 transition-transform duration-300"
+                    containerClassName="!w-[240px] !h-[72px]"
                     borderClassName="bg-[radial-gradient(var(--emerald-500)_25%,transparent_65%)]"
                     duration={1200}
                   >
@@ -53,25 +53,27 @@ const Hero = () => {
         </ContainerLayout>
 
         {/* Dashboard Preview with Scroll Animation */}
-        <div className="relative -mb-20">
+        <div className="relative -mt-12">
           <ContainerScroll
             titleComponent={
-              <>
-                <h2 className="text-4xl font-semibold text-white mb-4">
+              <div className="text-center mb-6">
+                <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-3">
                   Powerful Analytics at Your Fingertips
                 </h2>
-                <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+                <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
                   Get real-time insights and AI-powered forecasting for your Shopify store
                 </p>
-              </>
+              </div>
             }
           >
-            <Image
-              src={home}
-              alt="Reelin Dashboard"
-              className="w-full h-full object-cover object-center"
-              priority
-            />
+            <div className="px-4 lg:px-8">
+              <Image
+                src={home}
+                alt="Reelin Dashboard"
+                className="w-full h-full object-cover object-center rounded-lg shadow-2xl"
+                priority
+              />
+            </div>
           </ContainerScroll>
         </div>
       </div>
