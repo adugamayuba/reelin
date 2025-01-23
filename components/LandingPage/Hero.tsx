@@ -40,10 +40,10 @@ const Hero = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
                   borderRadius="1.75rem"
-                  className="bg-white text-[#004225] text-xl font-semibold"
-                  containerClassName="!w-[200px] !h-[68px]"
-                  borderClassName="bg-[radial-gradient(var(--emerald-500)_40%,transparent_60%)] opacity-90"
-                  duration={2000}
+                  className="bg-white/80 text-[#004225] text-xl font-semibold hover:scale-105 transition-transform"
+                  containerClassName="!w-[220px] !h-[70px]"
+                  borderClassName="bg-[radial-gradient(var(--emerald-500)_25%,transparent_65%)]"
+                  duration={1200}
                 >
                   Join Waitlist
                 </Button>
