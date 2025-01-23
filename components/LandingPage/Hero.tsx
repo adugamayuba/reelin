@@ -2,6 +2,7 @@ import ContainerLayout from "../../Layouts/ContainerLayout";
 import Image from "next/image";
 import Link from "next/link";
 import home from "../../assets/png/Home.png";
+import shopifyLogo from "../../assets/png/shopify logo.png";
 import { Squares } from "../../components/Squares";
 import { Button } from "../../components/ui/moving-border";
 import { ContainerScroll } from "../../components/ui/container-scroll-animation";
@@ -31,7 +32,21 @@ const Hero = () => {
                 titleComponent={
                   <div className="text-center space-y-4 mb-8">
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
-                      Your Shopify Store's AI-Powered Command Center
+                      <div className="flex items-center justify-center flex-wrap gap-2">
+                        <span>Your</span>
+                        <span className="inline-flex items-center">
+                          <Image 
+                            src={shopifyLogo} 
+                            alt="Shopify" 
+                            width={80} 
+                            height={80} 
+                            className="mx-1 -mt-2"
+                          />
+                          hopify
+                        </span>
+                        <span>Store's AI-Powered</span>
+                        <span>Command Center</span>
+                      </div>
                     </h2>
                     <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
                       Turn your store data into intelligent decisions with AI-driven insights, forecasting, and smart
