@@ -55,11 +55,11 @@ const MobileNav = () => {
 
             <div className="flex flex-col w-full px-4 py-6 space-y-6 relative z-10">
               <Link
-                href="#products"
+                href="#why"
                 className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
                 onClick={() => setShow(false)}
               >
-                Products
+                Product
               </Link>
               <Link
                 href="#solutions"

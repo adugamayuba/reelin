@@ -30,10 +30,10 @@ const Navbar = () => {
           </div>
           <nav className="flex items-center space-x-8">
             <Link
-              href="#products"
+              href="#why"
               className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
             >
-              Products
+              Product
             </Link>
             <Link
               href="#solutions"
