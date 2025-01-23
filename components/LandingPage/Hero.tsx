@@ -30,10 +30,10 @@ const Hero = () => {
             {/* Main Content */}
             <div className="max-w-3xl mx-auto">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-white">
-                Unlocking Insights, Driving Growth.
+                Your Shopify Store's AI-Powered Command Center
               </h1>
               <p className="text-lg lg:text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
-                Transforming Data into Actionable Insight for Everyday Business Decision.
+                Turn your store data into intelligent decisions with AI-driven insights, forecasting, and smart alerts
               </p>
               
               {/* CTA Buttons */}
