@@ -3,14 +3,15 @@ import Image from "next/image";
 import Link from "next/link";
 import home from "../../assets/png/Home.png";
 import { Squares } from "../../components/Squares";
+import { Button } from "../../components/ui/moving-border";
 
 const Hero = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="w-full relative pt-32 pb-48 overflow-hidden">
+      <div className="w-full relative pb-48 overflow-hidden">
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#004225] via-[#005c34] to-[#004225]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#004225] to-[#005c34]" />
         
         {/* Animated Squares Background */}
         <div className="absolute inset-0 w-full h-full">
@@ -24,15 +25,8 @@ const Hero = () => {
           />
         </div>
 
-        {/* Version Badge */}
-        <div className="absolute top-8 left-1/2 -translate-x-1/2 z-10">
-          <div className="px-4 py-2 bg-[#005c34] rounded-full text-sm inline-flex items-center gap-2 text-white">
-            New Features Available <span className="ml-1">→</span>
-          </div>
-        </div>
-
         <ContainerLayout>
-          <div className="w-full flex flex-col items-center text-center relative z-10">
+          <div className="w-full flex flex-col items-center text-center relative z-10 pt-36">
             {/* Main Content */}
             <div className="max-w-3xl mx-auto">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6 text-white">
@@ -44,12 +38,15 @@ const Hero = () => {
               
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 py-3 bg-white text-[#004225] rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                  Get Started Now
-                </button>
-                <button className="px-6 py-3 border border-white rounded-lg font-semibold hover:bg-[#005c34] transition-colors text-white">
-                  Request a Demo
-                </button>
+                <Button 
+                  borderRadius="1.75rem"
+                  className="bg-white text-[#004225] text-xl font-semibold"
+                  containerClassName="!w-[200px] !h-[68px]"
+                  borderClassName="bg-[radial-gradient(var(--emerald-500)_40%,transparent_60%)] opacity-90"
+                  duration={2000}
+                >
+                  Join Waitlist
+                </Button>
               </div>
             </div>
           </div>
@@ -69,7 +66,7 @@ const Hero = () => {
       </div>
 
       {/* Spacer div to create room for the overlapped dashboard */}
-      <div className="h-[15vh] bg-gradient-to-br from-[#004225] via-[#005c34] to-[#004225]"></div>
+      <div className="h-[30vh] bg-gradient-to-br from-[#004225] to-[#005c34]"></div>
     </div>
   );
 };

@@ -1,14 +1,13 @@
 import Link from "next/link";
 import ContainerLayout from "../../Layouts/ContainerLayout"
-import Image from "next/image"
 
+import Image from "next/image"
 const Welcome = () => {
   return (
-    <div className="w-full flex flex-col relative bg-gradient-to-b from-[#2B2E2F] to-[#2B2E2F] -mt-[15vh]">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#004225] to-[#2B2E2F] opacity-90" />
-      <div className="w-full mt-[15vh] relative z-10">
+    <div className="w-full flex flex-col relative bg-[#2B2E2F] ">
+      <div className="w-full   mt-[10px] flow-hide m ">
         <ContainerLayout>
-          <div className="w-full flex flex-col items-center lg:min-h-[648px] py-4 lg:py-0 justify-center">
+          <div className="w-full flex flex-col items-center flow-hide lg:min-h-[648px] py-4 lg:py-0 justify-center  ">
             <h1
               className="text-white font-bold sm:text-[32px] text-2xl lg:text-[48px] text-center "
               data-aos="fade-up"
