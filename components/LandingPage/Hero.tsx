@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#004225] to-[#005c34] min-h-[calc(100vh-64px)] flex items-center justify-center">
+      <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#004225] to-[#005c34] min-h-[calc(100vh-64px)] flex items-start justify-center">
         {/* Animated Squares Background */}
         <div className="absolute inset-0 w-full h-full">
           <Squares
@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
 
         <ContainerLayout>
-          <div className="w-full flex flex-col items-center justify-center text-center relative z-10 py-16 md:py-20 lg:py-24">
+          <div className="w-full flex flex-col items-center text-center relative z-10 -mt-10">
             {/* Dashboard Preview */}
             <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
               <ContainerScroll
