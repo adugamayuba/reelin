@@ -66,7 +66,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="pt-2">
+            <div className="-mt-30">
               <Link href="/waitlist">
                 <Button 
                   borderRadius="1.75rem"
