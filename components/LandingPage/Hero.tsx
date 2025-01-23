@@ -49,7 +49,7 @@ const Hero = () => {
                       </div>
                     </h2>
                     <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
-                      Turn your store data into intelligent decisions with AI-driven insights, forecasting, and smart
+                      Transform your store's performance with AI-powered analytics, real-time insights, and smart automation to boost sales and growth
                     </p>
                   </div>
                 }
