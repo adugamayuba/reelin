@@ -95,114 +95,117 @@ const Pricing = () => {
   };
 
   return (
-    <div className="w-full bg-[#2B2E2F] py-[120px]" id="pricing">
+    <div className="w-full bg-white py-[120px]" id="pricing">
       <ContainerLayout>
-        <div className="w-full flex flex-col items-center flow-hide">
-          <h1
-            className="text-white text-center font-bold text-[28px] sm:text-[32px] lg:text-[56px]"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            Flexible Pricing Plans
+        <div className="w-full flex flex-col items-center">
+          <h1 className="text-[#2B2E2F] text-center font-bold text-[40px]">
+            Choose your plan
           </h1>
-          <p
-            className="max-w-[604px] w-full mx-auto sm:mt-6 mt-4 text-sm sm:text-lg font-light text-center text-white"
-            data-aos="fade-up"
-            data-aos-duration="2000"
-          >
-            Choose the plan that suits your e-commerce needs. We offer Starter,
-            Pro, and Enterprise plans.
+          <p className="mt-3 text-base text-gray-600 text-center">
+            14 days unlimited free trial. No contract or credit card required.
           </p>
 
-          <div className="flex justify-center mb-10 mt-8">
-            <label className="relative inline-flex items-center cursor-pointer">
-              <Label className="text-white">
-                <Switch
-                  ref={switchRef as any}
-                  checked={!isMonthly}
-                  onCheckedChange={handleToggle}
-                  className="relative"
-                />
-              </Label>
-            </label>
-            <span className="ml-2 font-semibold text-white">
-              Annual billing <span className="text-gray-400">(Save 20%)</span>
-            </span>
+          <div className="flex items-center gap-4 mt-10 mb-16">
+            <span className={cn("text-base font-medium", isMonthly ? "text-[#2B2E2F]" : "text-gray-500")}>Monthly</span>
+            <Switch
+              ref={switchRef as any}
+              checked={!isMonthly}
+              onCheckedChange={handleToggle}
+              className="relative"
+            />
+            <span className={cn("text-base font-medium", !isMonthly ? "text-[#2B2E2F]" : "text-gray-500")}>Yearly</span>
           </div>
 
-          <div className="mt-[60px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full flow-hide">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto relative">
             {plans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ y: 50, opacity: 1 }}
-                whileInView={
-                  isDesktop
-                    ? {
-                        y: 0,
-                        opacity: 1,
-                        x: 0,
-                        scale: 1.0,
-                      }
-                    : {}
-                }
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1.6,
-                  type: "spring",
-                  stiffness: 100,
-                  damping: 30,
-                  delay: 0.4,
-                  opacity: { duration: 0.5 },
+                initial={{ y: 20, opacity: 0 }}
+                animate={{ 
+                  y: index === 1 ? -20 : 0, 
+                  opacity: 1,
+                  zIndex: index === 1 ? 10 : 0
                 }}
-                className="rounded-[8px] p-8 relative bg-greyish flex flex-col"
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                }}
+                className={cn(
+                  "rounded-[24px] p-8 relative flex flex-col border-[1px] border-gray-200 bg-white min-h-[600px]",
+                  index === 1 ? "bg-[#1B4332] text-white shadow-xl" : "shadow-sm"
+                )}
               >
-                <h1 className="text-sm sm:text-lg font-semibold text-[#828282]">
+                <h2 className={cn(
+                  "text-base font-semibold mb-8",
+                  index === 1 ? "text-gray-200" : "text-gray-600"
+                )}>
                   {plan.name}
-                </h1>
+                </h2>
 
-                <div className="sm:mt-6 mt-4 flex items-end gap-x-2">
+                <div className="flex items-baseline gap-2">
                   {plan.price === "Custom" ? (
-                    <h1 className="text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]">
+                    <span className={cn(
+                      "text-4xl font-bold",
+                      index === 1 ? "text-white" : "text-[#2B2E2F]"
+                    )}>
                       {plan.price}
-                    </h1>
+                    </span>
                   ) : (
-                    <NumberFlow
-                      value={isMonthly ? Number(plan.price) : Number(plan.yearlyPrice)}
-                      format={{
-                        style: "currency",
-                        currency: "USD",
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2,
-                      }}
-                      willChange
-                      className="text-customBlack font-bold text-[28px] sm:text-[32px] lg:text-[48px]"
-                    />
+                    <>
+                      <span className={cn(
+                        "text-4xl font-bold",
+                        index === 1 ? "text-white" : "text-[#2B2E2F]"
+                      )}>
+                        $
+                        <NumberFlow
+                          value={isMonthly ? Number(plan.price) : Number(plan.yearlyPrice)}
+                          format={{
+                            minimumFractionDigits: 2,
+                            maximumFractionDigits: 2,
+                          }}
+                          willChange
+                        />
+                      </span>
+                      <span className={cn(
+                        "text-base",
+                        index === 1 ? "text-gray-300" : "text-gray-500"
+                      )}>
+                        /mnth
+                      </span>
+                    </>
                   )}
-                </div>
-
-                <h1 className="text-sm sm:text-lg font-semibold mt-4 text-[#828282]">
-                  {plan.period}
-                </h1>
-
-                <div className="mt-12 flex flex-col space-y-3">
-                  {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex space-x-3 items-center">
-                      <Check className="h-4 w-4 text-gray-600" />
-                      <p className="text-base text-customBlack">
-                        {feature}
-                      </p>
-                    </div>
-                  ))}
                 </div>
 
                 <Link
                   href={plan.href}
                   target={plan.name === "ENTERPRISE" ? "_blank" : undefined}
                   rel={plan.name === "ENTERPRISE" ? "noopener noreferrer" : undefined}
-                  className="w-full rounded-[6px] py-4 px-8 text-base mt-24 text-center border-[2px] hover:bg-white hover:text-[#2B2E2F] border-[#2B2E2F] text-[#2B2E2F]"
+                  className={cn(
+                    "mt-8 w-full rounded-full py-3 px-6 text-base font-medium text-center transition-colors",
+                    index === 1 
+                      ? "bg-white text-[#1B4332] hover:bg-gray-100" 
+                      : "bg-[#1B4332] text-white hover:bg-[#143728]"
+                  )}
                 >
                   {plan.buttonText}
                 </Link>
+
+                <div className="mt-8 flex flex-col space-y-4">
+                  {plan.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <Check className={cn(
+                        "h-5 w-5",
+                        index === 1 ? "text-gray-300" : "text-gray-400"
+                      )} />
+                      <span className={cn(
+                        "text-base leading-relaxed",
+                        index === 1 ? "text-gray-200" : "text-gray-600"
+                      )}>
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
