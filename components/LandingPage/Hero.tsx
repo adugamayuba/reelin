@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#004225] to-[#005c34] min-h-[calc(100vh-64px)] flex items-start justify-center">
+      <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#004225] to-[#005c34] min-h-[calc(100vh-64px)] flex items-start justify-center rounded-b-[80px]">
         {/* Animated Squares Background */}
         <div className="absolute inset-0 w-full h-full">
           <Squares
