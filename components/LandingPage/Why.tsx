@@ -1,92 +1,72 @@
 import Link from "next/link";
 import ContainerLayout from "../../Layouts/ContainerLayout"
-import ana from "../../assets/png/pa.png";
-import cash from "../../assets/png/ai.png";
-import expense from "../../assets/png/ri.png";
-import Image from "next/image";
+
 const Why = () => {
   return (
-    <div
-      className="w-full bg-[#f4f4f4] py-[120px]"
-      id="why"
-      data-aos="fade-up"
-      data-aos-duration="2000"
-    >
+    <section className="w-full bg-white py-20 overflow-x-hidden" id="why">
       <ContainerLayout>
-        <div className="w-full flex flex-col items-center flow-hide">
-          <h1 className="text-customBlack text-[28px] md:text-[40px] 2xl:text-[56px] font-bold text-center ">
+        <div className="flex flex-col items-center">
+          <h2 className="text-[40px] font-semibold text-center text-gray-900 mb-4">
             Why Choose Reelin?
-          </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full mt-6 flow-hide max-w-[1272px] mx-auto">
-            {/* start of a grid */}
-            <div className="w-full bg-greyish max-w-[408px] min-h-[514px] rounded-[8px]  flex flex-col pt-6 pb-4 relative">
-              <h1 className="text-customBlack text-2xl font-bold px-6 ">
-                AI-Powered Analytics
-              </h1>
-              <p className="text-customBlack mt-4 text-lg font-light px-6">
-                Seamlessly combine AI-driven insights and analytics tailored for
-                e-commerce merchants.
-              </p>
-              <div className="w-full flex justify-end absolute bottom-0 right-0 ">
-                <Image
-                  src={ana}
-                  alt="analytics reelin"
-                  className="w-[300px] h-auto"
-                />
+          </h2>
+          <p className="text-gray-600 text-center max-w-2xl mb-12">
+            From advanced tools to expert support, we provide everything you need to analyze, optimize, and grow.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
+            {/* Real-Time Analytics */}
+            <div className="bg-[#1B4332] p-8 rounded-xl text-white transition-all hover:transform hover:scale-102">
+              <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 8V12L14 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+                </svg>
               </div>
-            </div>
-            {/* end of a grid */}
-            {/* start of a grid */}
-            <div className="w-full bg-[#D5FD89] max-w-[408px] min-h-[514px] rounded-[8px]  flex flex-col pt-6 pb-4 relative">
-              <h1 className="text-customBlack text-2xl font-bold px-6 ">
-                Real-time Insights
-              </h1>
-              <p className="text-customBlack mt-4 text-lg font-light px-6">
-                Gain instant access to your financial data and predictions,
-                keeping you informed at all times.
+              <h3 className="text-2xl font-semibold mb-4">AI-Powered Analytics</h3>
+              <p className="text-gray-200 text-lg leading-relaxed">
+                Seamlessly combine AI-driven insights and analytics tailored for e-commerce merchants.
               </p>
-              <div className="w-full flex justify-end absolute right-0 bottom-0 ">
-                <Image
-                  src={expense}
-                  alt="analytics reelin"
-                  className="w-[300px] h-auto"
-                />
-              </div>
             </div>
-            {/* end of a grid */}
-            {/* start of a grid */}
-            <div className="w-full bg-[#292D32] max-w-[408px] min-h-[514px] rounded-[8px]  flex flex-col pt-6 relative ">
-              <h1 className="text-white text-2xl font-bold px-6 ">
-                Actionable Intelligence
-              </h1>
-              <p className="text-white mt-4 text-lg font-light px-6">
-                Transform data into actionable insights for informed financial
-                decision-making.
+
+            {/* Custom Dashboards */}
+            <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all hover:transform hover:scale-102">
+              <div className="w-14 h-14 bg-[#1B4332] rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M4 9H20" stroke="currentColor" strokeWidth="2"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Real-time Insights</h3>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Gain instant access to your financial data and predictions, keeping you informed at all times.
               </p>
-              <div className="w-full absolute flex justify-end right-0 bottom-0 ">
-                <Image
-                  src={cash}
-                  alt="analytics reelin"
-                  className="w-[230px] h-auto"
-                />
-              </div>
             </div>
-            {/* end of a grid */}
+
+            {/* Seamless Integrations */}
+            <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all hover:transform hover:scale-102">
+              <div className="w-14 h-14 bg-[#1B4332] rounded-lg flex items-center justify-center mb-6">
+                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold mb-4 text-gray-900">Actionable Intelligence</h3>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Transform data into actionable insights for informed financial decision-making.
+              </p>
+            </div>
           </div>
-          <div className="mx-auto mt-[60px]">
+
+          <div className="mt-20 mb-8">
             <Link
-              // href="https://demo.reelin.ai/register"
-              // target="_blank"
-              // rel="noopener noreferrer"
-              href={"/waitlist"}
-              className="w-auto  px-8 py-4  text-customBlack font-bold flex items-center bg-greyish justify-center rounded-[6px]  hover:bg-[#0047A7] hover:text-white hover:border-none"
+              href="/waitlist"
+              className="px-14 py-7 text-xl font-semibold rounded-xl hover:bg-[#143026] transition-all transform hover:scale-105 text-white shadow-lg bg-[#1B4332]"
             >
               Join Waitlist
             </Link>
           </div>
         </div>
       </ContainerLayout>
-    </div>
+    </section>
   );
 }
 
