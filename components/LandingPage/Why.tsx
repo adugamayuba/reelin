@@ -1,5 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 import ContainerLayout from "../../Layouts/ContainerLayout"
+import RealDataMonitoring from "../../assets/png/Real-data-monitoring.jpg";
+import CustomizableDashboards from "../../assets/png/Customizable Dashboards.jpg";
+import AIPoweredForecasting from "../../assets/png/AI-powered-forecasting.jpg";
+import SmartAlerts from "../../assets/png/Smart Alerts & Insights.jpg";
 
 const Why = () => {
   return (
@@ -65,6 +70,91 @@ const Why = () => {
             >
               Join Waitlist
             </Link>
+          </div>
+
+          <div className="mt-24 w-full">
+            <h2 className="text-[40px] font-semibold text-center text-gray-900 mb-4">
+              Powerful Features to Supercharge Your Analytics
+            </h2>
+            <p className="text-gray-600 text-center max-w-2xl mx-auto mb-16">
+              Our platform is packed with advanced tools to help you turn raw data into meaningful insights
+              and drive smarter decisions.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {/* Real-Time Data Monitoring */}
+              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                <h3 className="text-2xl font-semibold mb-3 text-gray-900">Real-Time Data Monitoring</h3>
+                <p className="text-gray-600 mb-6">
+                  We analyze your Shopify store's current performance, uncover trends, and identify areas for improvement
+                  through AI-powered analytics.
+                </p>
+                <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
+                  <Image
+                    src={RealDataMonitoring}
+                    alt="Real-time data monitoring dashboard"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    priority
+                  />
+                </div>
+              </div>
+
+              {/* Customizable Dashboards */}
+              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                <h3 className="text-2xl font-semibold mb-3 text-gray-900">Customizable Dashboards</h3>
+                <p className="text-gray-600 mb-6">
+                  Create personalized views with drag-and-drop widgets to track the metrics that matter most to your business
+                  growth.
+                </p>
+                <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
+                  <Image
+                    src={CustomizableDashboards}
+                    alt="Customizable dashboard interface"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* AI-Powered Forecasting */}
+              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                <h3 className="text-2xl font-semibold mb-3 text-gray-900">AI-Powered Forecasting</h3>
+                <p className="text-gray-600 mb-6">
+                  Leverage advanced AI algorithms to predict future sales trends, revenue projections, and inventory needs
+                  with remarkable accuracy.
+                </p>
+                <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
+                  <Image
+                    src={AIPoweredForecasting}
+                    alt="AI-powered forecasting visualization"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* Smart Alerts & Insights */}
+              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                <h3 className="text-2xl font-semibold mb-3 text-gray-900">Smart Alerts & Insights</h3>
+                <p className="text-gray-600 mb-6">
+                  Receive intelligent notifications about important trends, anomalies, and opportunities, helping you stay
+                  ahead of your business needs.
+                </p>
+                <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
+                  <Image
+                    src={SmartAlerts}
+                    alt="Smart alerts and insights interface"
+                    width={600}
+                    height={400}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </ContainerLayout>
