@@ -101,12 +101,12 @@ const Why = () => {
               </div>
 
               {/* Customizable Dashboards - Small Card */}
-              <div className="md:col-span-4 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all h-fit">
+              <div className="md:col-span-4 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900">Customizable Dashboards</h3>
                 <p className="text-gray-600 mb-4">
                   Create personalized views with drag-and-drop widgets.
                 </p>
-                <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden">
+                <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
                   <Image
                     src={CustomizableDashboards}
                     alt="Customizable dashboard interface"
@@ -118,12 +118,12 @@ const Why = () => {
               </div>
 
               {/* AI-Powered Forecasting - Small Card */}
-              <div className="md:col-span-4 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all h-fit">
+              <div className="md:col-span-4 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all flex flex-col">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900">AI-Powered Forecasting</h3>
                 <p className="text-gray-600 mb-4">
                   Leverage AI algorithms to predict future trends accurately.
                 </p>
-                <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden">
+                <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
                   <Image
                     src={AIPoweredForecasting}
                     alt="AI-powered forecasting visualization"
