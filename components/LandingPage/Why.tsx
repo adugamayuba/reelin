@@ -78,73 +78,73 @@ const Why = () => {
               and drive smarter decisions.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-              {/* Real-Time Data Monitoring - Large Card */}
-              <div className="md:col-span-8 p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">Real-Time Data Monitoring</h3>
-                <p className="text-lg text-gray-600 mb-6">
-                  We analyze your Shopify store's current performance, uncover trends, and identify areas for improvement.
-                </p>
-                <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
-                  <Image
-                    src={RealDataMonitoring}
-                    alt="Real-time data monitoring dashboard"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    priority
-                  />
+            <div className="max-w-[1200px] mx-auto px-4 overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+                {/* First Row */}
+                <div className="md:col-span-7 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Real-Time Data Monitoring</h3>
+                  <p className="text-base text-gray-600 mb-4">
+                    We analyze your Shopify store's current performance, uncover trends, and identify areas for improvement.
+                  </p>
+                  <div className="aspect-[16/9] bg-gray-50 rounded-lg overflow-hidden">
+                    <Image
+                      src={RealDataMonitoring}
+                      alt="Real-time data monitoring dashboard"
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover transform-gpu hover:scale-[1.02] transition-transform duration-300"
+                      priority
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Customizable Dashboards - Small Card */}
-              <div className="md:col-span-4 p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">Customizable Dashboards</h3>
-                <p className="text-lg text-gray-600 mb-6">
-                  Create personalized views with drag-and-drop widgets.
-                </p>
-                <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
-                  <Image
-                    src={CustomizableDashboards}
-                    alt="Customizable dashboard interface"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                <div className="md:col-span-5 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300 flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Customizable Dashboards</h3>
+                  <p className="text-base text-gray-600 mb-4">
+                    Create personalized views with drag-and-drop widgets.
+                  </p>
+                  <div className="flex-1 bg-gray-50 rounded-lg overflow-hidden">
+                    <Image
+                      src={CustomizableDashboards}
+                      alt="Customizable dashboard interface"
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover transform-gpu hover:scale-[1.02] transition-transform duration-300"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* AI-Powered Forecasting - Small Card */}
-              <div className="md:col-span-4 p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex flex-col">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">AI-Powered Forecasting</h3>
-                <p className="text-lg text-gray-600 mb-6">
-                  Leverage AI algorithms to predict future trends accurately.
-                </p>
-                <div className="flex-1 bg-gray-50 rounded-xl overflow-hidden">
-                  <Image
-                    src={AIPoweredForecasting}
-                    alt="AI-powered forecasting visualization"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                {/* Second Row */}
+                <div className="md:col-span-5 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300 flex flex-col">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">AI-Powered Forecasting</h3>
+                  <p className="text-base text-gray-600 mb-4">
+                    Leverage AI algorithms to predict future trends accurately.
+                  </p>
+                  <div className="flex-1 bg-gray-50 rounded-lg overflow-hidden">
+                    <Image
+                      src={AIPoweredForecasting}
+                      alt="AI-powered forecasting visualization"
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover transform-gpu hover:scale-[1.02] transition-transform duration-300"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Smart Alerts & Insights - Large Card */}
-              <div className="md:col-span-8 p-8 bg-white rounded-2xl border-2 border-gray-100 shadow-sm hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-900">Smart Alerts & Insights</h3>
-                <p className="text-lg text-gray-600 mb-6">
-                  Receive intelligent notifications about trends, anomalies, and opportunities.
-                </p>
-                <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
-                  <Image
-                    src={SmartAlerts}
-                    alt="Smart alerts and insights interface"
-                    width={600}
-                    height={400}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
+                <div className="md:col-span-7 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300">
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Smart Alerts & Insights</h3>
+                  <p className="text-base text-gray-600 mb-4">
+                    Receive intelligent notifications about trends, anomalies, and opportunities.
+                  </p>
+                  <div className="aspect-[16/9] bg-gray-50 rounded-lg overflow-hidden">
+                    <Image
+                      src={SmartAlerts}
+                      alt="Smart alerts and insights interface"
+                      width={600}
+                      height={400}
+                      className="w-full h-full object-cover transform-gpu hover:scale-[1.02] transition-transform duration-300"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
