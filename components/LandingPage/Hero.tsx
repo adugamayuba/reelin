@@ -13,7 +13,7 @@ const Hero = () => {
         {/* Animated Squares Background */}
         <div className="absolute inset-0 w-full h-full">
           <Squares
-            direction="diagonal"
+            direction="3d"
             speed={0.5}
             borderColor="rgba(255,255,255,0.1)"
             squareSize={50}
@@ -42,9 +42,9 @@ const Hero = () => {
                               height={50} 
                               className="mt-1"
                             />
-                            <span className="text-4xl font-bold text-white tracking-tighter">
+                            <span className="text-4xl font-bold tracking-tighter" style={{ fontFamily: 'ShopifySans, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif' }}>
                               <span className="bg-gradient-to-r from-green-200 to-white bg-clip-text text-transparent">
-                                hopify
+                                Shopify
                               </span>
                             </span>
                           </div>
