@@ -1,7 +1,7 @@
 import ContainerLayout from "../../Layouts/ContainerLayout";
 import Image from "next/image";
 import home from "../../assets/png/Home.png";
-import shopifyLogo from "../../assets/png/shopify logo.png";
+import shopifySLogo from "../../assets/png/shopify logo.png";
 import { Squares } from "../../components/Squares";
 import { ContainerScroll } from "../../components/ui/container-scroll-animation";
 
@@ -29,25 +29,32 @@ const Hero = () => {
               <ContainerScroll
                 titleComponent={
                   <div className="text-center space-y-6 mb-12">
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                      <span className="sr-only">Boost Your Shopify Sales with AI - Dominate Your Market</span>
                       <div className="flex flex-col items-center gap-2">
-                        <span className="whitespace-nowrap">Your</span>
-                        <div className="flex items-center justify-center gap-2 -ml-4">
-                          <Image 
-                            src={shopifyLogo} 
-                            alt="Shopify" 
-                            width={80} 
-                            height={80} 
-                            className="mt-1"
-                          />
-                          <span>Store's AI-Powered</span>
+                        <span aria-hidden="true">Boost Your</span>
+                        <div className="flex items-center justify-center gap-3" aria-hidden="true">
+                          <div className="flex items-center gap-2">
+                            <Image 
+                              src={shopifySLogo} 
+                              alt="" 
+                              width={50} 
+                              height={50} 
+                              className="mt-1"
+                            />
+                            <span className="text-4xl font-bold text-white tracking-tighter">
+                              <span className="bg-gradient-to-r from-green-200 to-white bg-clip-text text-transparent">
+                                hopify
+                              </span>
+                            </span>
+                          </div>
+                          <span>Sales with AI</span>
                         </div>
-                        <span>Command Center</span>
+                        <span aria-hidden="true">Dominate Your Market</span>
                       </div>
-                    </h2>
+                    </h1>
                     <p className="text-lg text-gray-200 max-w-2xl mx-auto leading-relaxed">
-                      Transform your store's performance with AI-powered analytics, real-time insights, 
-                      and smart automation to boost sales and growth
+                      AI-powered analytics and automation to optimize conversions, reduce costs, and accelerate growth
                     </p>
                   </div>
                 }
