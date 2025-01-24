@@ -1,27 +1,29 @@
 import { useRef, useEffect, useState } from "react"
 
 interface SquaresProps {
-  direction?: "right" | "left" | "up" | "down" | "diagonal"
+  direction?: "right" | "left" | "up" | "down" | "diagonal" | "3d"
   speed?: number
   borderColor?: string
   squareSize?: number
   hoverFillColor?: string
   className?: string
+  perspective?: number
 }
 
 export function Squares({
-  direction = "right",
+  direction = "3d",
   speed = 1,
   borderColor = "#333",
   squareSize = 40,
   hoverFillColor = "#222",
   className,
+  perspective = 800,
 }: SquaresProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const requestRef = useRef<number>()
   const numSquaresX = useRef<number>()
   const numSquaresY = useRef<number>()
-  const gridOffset = useRef({ x: 0, y: 0 })
+  const gridOffset = useRef({ x: 0, y: 0, z: 0 })
   const [hoveredSquare, setHoveredSquare] = useState<{
     x: number
     y: number
@@ -34,7 +36,6 @@ export function Squares({
     const ctx = canvas.getContext("2d")
     if (!ctx) return
 
-    // Remove the background color setting
     canvas.style.background = "transparent"
 
     const resizeCanvas = () => {
@@ -52,13 +53,35 @@ export function Squares({
 
       const startX = Math.floor(gridOffset.current.x / squareSize) * squareSize
       const startY = Math.floor(gridOffset.current.y / squareSize) * squareSize
+      const zOffset = gridOffset.current.z
 
       ctx.lineWidth = 0.5
 
+      // Draw grid with perspective effect
       for (let x = startX; x < canvas.width + squareSize; x += squareSize) {
         for (let y = startY; y < canvas.height + squareSize; y += squareSize) {
           const squareX = x - (gridOffset.current.x % squareSize)
           const squareY = y - (gridOffset.current.y % squareSize)
+
+          // Calculate perspective distortion
+          const distanceFromCenter = Math.sqrt(
+            Math.pow((squareX - canvas.width / 2) / canvas.width, 2) +
+            Math.pow((squareY - canvas.height / 2) / canvas.height, 2)
+          )
+
+          const scale = 1 + (distanceFromCenter * Math.sin(zOffset / 100)) / 2
+          const adjustedSize = squareSize * scale
+
+          // Calculate the center point of the square
+          const centerX = squareX + squareSize / 2
+          const centerY = squareY + squareSize / 2
+
+          // Apply perspective transformation
+          ctx.save()
+          ctx.translate(centerX, centerY)
+          ctx.scale(scale, scale)
+          ctx.rotate(distanceFromCenter * Math.sin(zOffset / 200) / 4)
+          ctx.translate(-squareSize / 2, -squareSize / 2)
 
           if (
             hoveredSquare &&
@@ -66,11 +89,14 @@ export function Squares({
             Math.floor((y - startY) / squareSize) === hoveredSquare.y
           ) {
             ctx.fillStyle = hoverFillColor
-            ctx.fillRect(squareX, squareY, squareSize, squareSize)
+            ctx.fillRect(0, 0, squareSize, squareSize)
           }
 
           ctx.strokeStyle = borderColor
-          ctx.strokeRect(squareX, squareY, squareSize, squareSize)
+          ctx.globalAlpha = 1 - distanceFromCenter / 2
+          ctx.strokeRect(0, 0, squareSize, squareSize)
+
+          ctx.restore()
         }
       }
     }
@@ -80,26 +106,25 @@ export function Squares({
 
       switch (direction) {
         case "right":
-          gridOffset.current.x =
-            (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize
+          gridOffset.current.x = (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize
           break
         case "left":
-          gridOffset.current.x =
-            (gridOffset.current.x + effectiveSpeed + squareSize) % squareSize
+          gridOffset.current.x = (gridOffset.current.x + effectiveSpeed + squareSize) % squareSize
           break
         case "up":
-          gridOffset.current.y =
-            (gridOffset.current.y + effectiveSpeed + squareSize) % squareSize
+          gridOffset.current.y = (gridOffset.current.y + effectiveSpeed + squareSize) % squareSize
           break
         case "down":
-          gridOffset.current.y =
-            (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize
+          gridOffset.current.y = (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize
           break
         case "diagonal":
-          gridOffset.current.x =
-            (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize
-          gridOffset.current.y =
-            (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize
+          gridOffset.current.x = (gridOffset.current.x - effectiveSpeed + squareSize) % squareSize
+          gridOffset.current.y = (gridOffset.current.y - effectiveSpeed + squareSize) % squareSize
+          break
+        case "3d":
+          gridOffset.current.z += effectiveSpeed
+          gridOffset.current.x = Math.sin(gridOffset.current.z / 100) * squareSize
+          gridOffset.current.y = Math.cos(gridOffset.current.z / 100) * squareSize
           break
       }
 
@@ -129,16 +154,13 @@ export function Squares({
       setHoveredSquare(null)
     }
 
-    // Event listeners
     window.addEventListener("resize", resizeCanvas)
     canvas.addEventListener("mousemove", handleMouseMove)
     canvas.addEventListener("mouseleave", handleMouseLeave)
 
-    // Initial setup
     resizeCanvas()
     requestRef.current = requestAnimationFrame(updateAnimation)
 
-    // Cleanup
     return () => {
       window.removeEventListener("resize", resizeCanvas)
       canvas.removeEventListener("mousemove", handleMouseMove)
@@ -147,12 +169,16 @@ export function Squares({
         cancelAnimationFrame(requestRef.current)
       }
     }
-  }, [direction, speed, borderColor, hoverFillColor, hoveredSquare, squareSize])
+  }, [direction, speed, borderColor, hoverFillColor, hoveredSquare, squareSize, perspective])
 
   return (
     <canvas
       ref={canvasRef}
       className={`w-full h-full border-none block ${className}`}
+      style={{
+        transform: `perspective(${perspective}px) rotateX(10deg)`,
+        transformStyle: "preserve-3d",
+      }}
     />
   )
 } 
