@@ -81,13 +81,12 @@ const Why = () => {
               and drive smarter decisions.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Real-Time Data Monitoring */}
-              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+              {/* Real-Time Data Monitoring - Large Card */}
+              <div className="md:col-span-8 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900">Real-Time Data Monitoring</h3>
-                <p className="text-gray-600 mb-6">
-                  We analyze your Shopify store's current performance, uncover trends, and identify areas for improvement
-                  through AI-powered analytics.
+                <p className="text-gray-600 mb-4">
+                  We analyze your Shopify store's current performance, uncover trends, and identify areas for improvement.
                 </p>
                 <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
                   <Image
@@ -101,14 +100,13 @@ const Why = () => {
                 </div>
               </div>
 
-              {/* Customizable Dashboards */}
-              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+              {/* Customizable Dashboards - Small Card */}
+              <div className="md:col-span-4 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all h-fit">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900">Customizable Dashboards</h3>
-                <p className="text-gray-600 mb-6">
-                  Create personalized views with drag-and-drop widgets to track the metrics that matter most to your business
-                  growth.
+                <p className="text-gray-600 mb-4">
+                  Create personalized views with drag-and-drop widgets.
                 </p>
-                <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
+                <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden">
                   <Image
                     src={CustomizableDashboards}
                     alt="Customizable dashboard interface"
@@ -119,14 +117,13 @@ const Why = () => {
                 </div>
               </div>
 
-              {/* AI-Powered Forecasting */}
-              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+              {/* AI-Powered Forecasting - Small Card */}
+              <div className="md:col-span-4 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all h-fit">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900">AI-Powered Forecasting</h3>
-                <p className="text-gray-600 mb-6">
-                  Leverage advanced AI algorithms to predict future sales trends, revenue projections, and inventory needs
-                  with remarkable accuracy.
+                <p className="text-gray-600 mb-4">
+                  Leverage AI algorithms to predict future trends accurately.
                 </p>
-                <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
+                <div className="aspect-square bg-gray-50 rounded-xl overflow-hidden">
                   <Image
                     src={AIPoweredForecasting}
                     alt="AI-powered forecasting visualization"
@@ -137,12 +134,11 @@ const Why = () => {
                 </div>
               </div>
 
-              {/* Smart Alerts & Insights */}
-              <div className="p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+              {/* Smart Alerts & Insights - Large Card */}
+              <div className="md:col-span-8 p-6 bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
                 <h3 className="text-2xl font-semibold mb-3 text-gray-900">Smart Alerts & Insights</h3>
-                <p className="text-gray-600 mb-6">
-                  Receive intelligent notifications about important trends, anomalies, and opportunities, helping you stay
-                  ahead of your business needs.
+                <p className="text-gray-600 mb-4">
+                  Receive intelligent notifications about trends, anomalies, and opportunities.
                 </p>
                 <div className="aspect-video bg-gray-50 rounded-xl overflow-hidden">
                   <Image
