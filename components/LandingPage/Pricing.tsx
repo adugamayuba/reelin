@@ -95,28 +95,28 @@ const Pricing = () => {
   };
 
   return (
-    <div className="w-full bg-white py-[120px]" id="pricing">
+    <section className="w-full bg-white py-24 overflow-x-hidden" id="pricing">
       <ContainerLayout>
-        <div className="w-full flex flex-col items-center">
-          <h1 className="text-[#2B2E2F] text-center font-bold text-[40px]">
-            Choose your plan
-          </h1>
-          <p className="mt-3 text-base text-gray-600 text-center">
-            14 days unlimited free trial. No contract or credit card required.
+        <div className="flex flex-col items-center">
+          <h2 className="text-4xl md:text-5xl font-semibold text-center text-gray-900 mb-6">
+            Flexible Pricing Plans
+          </h2>
+          <p className="text-lg text-gray-600 text-center max-w-2xl mb-16">
+            Choose the plan that suits your e-commerce needs. We offer Starter, Pro, and Enterprise plans.
           </p>
 
-          <div className="flex items-center gap-4 mt-10 mb-16">
-            <span className={cn("text-base font-medium", isMonthly ? "text-[#2B2E2F]" : "text-gray-500")}>Monthly</span>
+          <div className="flex items-center gap-4 mb-16">
+            <span className={cn("text-lg font-medium", isMonthly ? "text-gray-900" : "text-gray-500")}>Monthly</span>
             <Switch
               ref={switchRef as any}
               checked={!isMonthly}
               onCheckedChange={handleToggle}
               className="relative"
             />
-            <span className={cn("text-base font-medium", !isMonthly ? "text-[#2B2E2F]" : "text-gray-500")}>Yearly</span>
+            <span className={cn("text-lg font-medium", !isMonthly ? "text-gray-900" : "text-gray-500")}>Yearly</span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px] mx-auto">
             {plans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -131,22 +131,25 @@ const Pricing = () => {
                   delay: index * 0.1,
                 }}
                 className={cn(
-                  "rounded-[24px] p-8 relative flex flex-col border-[1px] border-gray-200 bg-white min-h-[600px]",
-                  index === 1 ? "bg-[#1B4332] text-white shadow-xl" : "shadow-sm"
+                  "rounded-2xl p-8 relative flex flex-col border border-gray-100 bg-white min-h-[680px]",
+                  index === 1 
+                    ? "bg-[#1B4332] text-white shadow-xl transform-gpu hover:scale-[1.02]" 
+                    : "shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01]",
+                  "transition-all duration-300"
                 )}
               >
-                <h2 className={cn(
-                  "text-base font-semibold mb-8",
-                  index === 1 ? "text-gray-200" : "text-gray-600"
+                <h3 className={cn(
+                  "text-2xl font-semibold mb-6",
+                  index === 1 ? "text-white" : "text-gray-900"
                 )}>
                   {plan.name}
-                </h2>
+                </h3>
 
-                <div className="flex items-baseline gap-2">
+                <div className="flex items-baseline gap-2 mb-8">
                   {plan.price === "Custom" ? (
                     <span className={cn(
                       "text-4xl font-bold",
-                      index === 1 ? "text-white" : "text-[#2B2E2F]"
+                      index === 1 ? "text-white" : "text-gray-900"
                     )}>
                       {plan.price}
                     </span>
@@ -154,7 +157,7 @@ const Pricing = () => {
                     <>
                       <span className={cn(
                         "text-4xl font-bold",
-                        index === 1 ? "text-white" : "text-[#2B2E2F]"
+                        index === 1 ? "text-white" : "text-gray-900"
                       )}>
                         $
                         <NumberFlow
@@ -167,8 +170,8 @@ const Pricing = () => {
                         />
                       </span>
                       <span className={cn(
-                        "text-base",
-                        index === 1 ? "text-gray-300" : "text-gray-500"
+                        "text-lg",
+                        index === 1 ? "text-gray-200" : "text-gray-500"
                       )}>
                         /mnth
                       </span>
@@ -181,10 +184,10 @@ const Pricing = () => {
                   target={plan.name === "ENTERPRISE" ? "_blank" : undefined}
                   rel={plan.name === "ENTERPRISE" ? "noopener noreferrer" : undefined}
                   className={cn(
-                    "mt-8 w-full rounded-full py-3 px-6 text-base font-medium text-center transition-colors",
+                    "w-full rounded-xl py-4 px-8 text-lg font-semibold text-center transition-all transform hover:scale-[1.02] duration-300",
                     index === 1 
-                      ? "bg-white text-[#1B4332] hover:bg-gray-100" 
-                      : "bg-[#1B4332] text-white hover:bg-[#143728]"
+                      ? "bg-white text-[#1B4332] hover:bg-gray-50" 
+                      : "bg-[#1B4332] text-white hover:bg-[#143026]"
                   )}
                 >
                   {plan.buttonText}
@@ -192,13 +195,13 @@ const Pricing = () => {
 
                 <div className="mt-8 flex flex-col space-y-4">
                   {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
+                    <div key={idx} className="flex items-start gap-3">
                       <Check className={cn(
-                        "h-5 w-5",
-                        index === 1 ? "text-gray-300" : "text-gray-400"
+                        "h-5 w-5 mt-0.5",
+                        index === 1 ? "text-gray-200" : "text-gray-400"
                       )} />
                       <span className={cn(
-                        "text-base leading-relaxed",
+                        "text-lg leading-relaxed",
                         index === 1 ? "text-gray-200" : "text-gray-600"
                       )}>
                         {feature}
@@ -206,12 +209,19 @@ const Pricing = () => {
                     </div>
                   ))}
                 </div>
+
+                <p className={cn(
+                  "mt-auto pt-8 text-sm",
+                  index === 1 ? "text-gray-200" : "text-gray-500"
+                )}>
+                  {plan.description}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </ContainerLayout>
-    </div>
+    </section>
   );
 };
 
