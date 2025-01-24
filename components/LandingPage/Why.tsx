@@ -14,45 +14,47 @@ const Why = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-            {/* Real-Time Analytics */}
-            <div className="bg-[#1B4332] p-8 rounded-xl text-white transition-all hover:transform hover:scale-102">
-              <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 8V12L14 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+            {/* AI-Powered Analytics */}
+            <div className="bg-[#1B4332] p-8 rounded-xl text-white transition-all hover:transform hover:scale-102 min-h-[400px] flex flex-col">
+              <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17v-2m3 2v-4m3 4v-6"></path>
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold mb-4">AI-Powered Analytics</h3>
-              <p className="text-gray-200 text-lg leading-relaxed">
+              <p className="text-gray-200 text-lg leading-relaxed mb-6">
                 Seamlessly combine AI-driven insights and analytics tailored for e-commerce merchants.
               </p>
+              <div className="mt-auto"></div>
             </div>
 
-            {/* Custom Dashboards */}
-            <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all hover:transform hover:scale-102">
-              <div className="w-14 h-14 bg-[#1B4332] rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M4 9H20" stroke="currentColor" strokeWidth="2"/>
+            {/* Real-time Insights */}
+            <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all hover:transform hover:scale-102 min-h-[400px] flex flex-col">
+              <div className="w-16 h-16 bg-[#1B4332] rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Real-time Insights</h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Gain instant access to your financial data and predictions, keeping you informed at all times.
               </p>
+              <div className="mt-auto"></div>
             </div>
 
-            {/* Seamless Integrations */}
-            <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all hover:transform hover:scale-102">
-              <div className="w-14 h-14 bg-[#1B4332] rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            {/* Actionable Intelligence */}
+            <div className="bg-white p-8 rounded-xl border border-gray-200 transition-all hover:transform hover:scale-102 min-h-[400px] flex flex-col">
+              <div className="w-16 h-16 bg-[#1B4332] rounded-xl flex items-center justify-center mb-6">
+                <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                 </svg>
               </div>
               <h3 className="text-2xl font-semibold mb-4 text-gray-900">Actionable Intelligence</h3>
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Transform data into actionable insights for informed financial decision-making.
               </p>
+              <div className="mt-auto"></div>
             </div>
           </div>
 
