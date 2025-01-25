@@ -69,7 +69,7 @@ const ContactUs = () => {
     };
 
     return (
-        <section className="w-full bg-[#1B4332] py-24 relative overflow-hidden">
+        <section className="w-full bg-[#1B4332] py-24 relative overflow-hidden rounded-t-[80px]">
             <ContainerLayout>
                 {/* Background Stars */}
                 <div className="absolute left-0 top-0 opacity-20">
