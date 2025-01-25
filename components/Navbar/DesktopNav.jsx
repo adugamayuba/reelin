@@ -8,7 +8,7 @@ import { Squares } from "../../components/Squares";
 const Navbar = () => {
   const router = useRouter();
   return (
-    <div className="fixed top-0 right-0 left-0 z-high w-full h-20 items-center hidden md:flex bg-[#1B4332] border-b border-[#143026] overflow-hidden">
+    <div className="fixed left-1/2 -translate-x-1/2 top-4 z-high w-[90%] max-w-[1000px] h-16 items-center hidden md:flex bg-[#1B4332] border border-[#143026] rounded-2xl overflow-hidden">
       {/* Animated Squares Background */}
       <div className="absolute inset-0 w-full h-full">
         <Squares
@@ -22,10 +22,10 @@ const Navbar = () => {
       </div>
 
       <ContainerLayout>
-        <div className="w-full flex justify-between items-center h-full relative z-10">
-          <div className="w-fit">
+        <div className="w-full flex justify-between items-center h-full relative z-10 px-6">
+          <Link href="#hero" className="w-fit cursor-pointer">
             <WhiteLogo />
-          </div>
+          </Link>
           <nav className="flex items-center space-x-8">
             <Link
               href="#why"
@@ -43,7 +43,7 @@ const Navbar = () => {
           <div>
             <Link
               href="/waitlist"
-              className="px-4 py-2 bg-white text-[#1B4332] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
+              className="px-4 py-1 bg-white text-[#1B4332] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
             >
               Join waitlist
             </Link>
