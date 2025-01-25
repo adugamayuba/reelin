@@ -7,8 +7,17 @@ import { Squares } from "../../components/Squares";
 
 const Navbar = () => {
   const router = useRouter();
+
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="fixed left-1/2 -translate-x-1/2 top-4 z-high w-[90%] max-w-[1000px] h-16 items-center hidden md:flex bg-[#1B4332] border border-[#143026] rounded-2xl overflow-hidden">
+    <div className="fixed left-1/2 -translate-x-1/2 top-4 z-high w-[90%] max-w-[1000px] h-14 items-center hidden md:flex bg-[#1B4332] border border-[#143026] rounded-2xl overflow-hidden">
       {/* Animated Squares Background */}
       <div className="absolute inset-0 w-full h-full">
         <Squares
@@ -23,22 +32,22 @@ const Navbar = () => {
 
       <ContainerLayout>
         <div className="w-full flex justify-between items-center h-full relative z-10 px-6">
-          <Link href="#hero" className="w-fit cursor-pointer">
+          <a onClick={(e) => scrollToSection(e, 'hero')} className="w-fit cursor-pointer">
             <WhiteLogo />
-          </Link>
+          </a>
           <nav className="flex items-center space-x-8">
-            <Link
-              href="#why"
-              className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
+            <a
+              onClick={(e) => scrollToSection(e, 'why')}
+              className="text-gray-200 hover:text-white text-sm font-medium transition-colors cursor-pointer"
             >
               Product
-            </Link>
-            <Link
-              href="#pricing"
-              className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
+            </a>
+            <a
+              onClick={(e) => scrollToSection(e, 'pricing')}
+              className="text-gray-200 hover:text-white text-sm font-medium transition-colors cursor-pointer"
             >
               Pricing
-            </Link>
+            </a>
           </nav>
           <div>
             <Link

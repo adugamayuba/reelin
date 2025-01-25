@@ -8,7 +8,7 @@ import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
 
 const Hero = () => {
   return (
-    <div className="relative">
+    <div id="hero" className="relative">
       {/* Hero Section */}
       <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#1B4332] to-[#143026] min-h-[calc(100vh-64px)] flex items-center justify-center rounded-b-[80px]">
         {/* Animated Squares Background */}
