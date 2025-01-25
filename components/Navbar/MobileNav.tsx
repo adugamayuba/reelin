@@ -9,7 +9,7 @@ const MobileNav = () => {
 
   return (
     <div>
-      <div className="w-full bg-[#004225] fixed top-0 z-50 left-0 right-0 flex flex-col md:hidden border-b border-[#005c34] overflow-hidden">
+      <div className="w-full bg-[#1B4332] fixed top-0 z-50 left-0 right-0 flex flex-col md:hidden border-b border-[#143026] overflow-hidden">
         {/* Animated Squares Background */}
         <div className="absolute inset-0 w-full h-full">
           <Squares
@@ -29,7 +29,7 @@ const MobileNav = () => {
 
           <button 
             onClick={() => setShow(!show)}
-            className="w-10 h-10 flex items-center justify-center text-white hover:bg-[#005c34] rounded-lg transition-colors"
+            className="w-10 h-10 flex items-center justify-center text-white hover:bg-[#143026] rounded-lg transition-colors"
           >
             {show ? (
               <FaTimes className="text-xl" />
@@ -40,7 +40,7 @@ const MobileNav = () => {
         </div>
 
         {show && (
-          <div className="bg-[#004225] w-full flex flex-col items-start z-50 h-[calc(100vh-5rem)] overflow-y-auto relative">
+          <div className="bg-[#1B4332] w-full flex flex-col items-start z-50 h-[calc(100vh-5rem)] overflow-y-auto relative">
             {/* Animated Squares Background for Menu */}
             <div className="absolute inset-0 w-full h-full">
               <Squares
@@ -83,7 +83,7 @@ const MobileNav = () => {
                 Resources
               </Link>
 
-              <div className="pt-6 border-t border-[#005c34] space-y-6">
+              <div className="pt-6 border-t border-[#143026] space-y-6">
                 <Link
                   href="/login"
                   className="block text-gray-200 hover:text-white text-sm font-medium transition-colors"
@@ -93,7 +93,7 @@ const MobileNav = () => {
                 </Link>
                 <Link
                   href="/waitlist"
-                  className="block w-full px-4 py-2 bg-white text-[#004225] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors text-center"
+                  className="block w-full px-4 py-2 bg-white text-[#1B4332] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors text-center"
                   onClick={() => setShow(false)}
                 >
                   See a demo

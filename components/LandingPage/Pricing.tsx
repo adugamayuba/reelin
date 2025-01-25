@@ -95,25 +95,29 @@ const Pricing = () => {
   };
 
   return (
-    <section className="w-full bg-white py-24 overflow-x-hidden" id="pricing">
+    <section id="pricing" className="py-24 bg-gray-50">
       <ContainerLayout>
-        <div className="flex flex-col items-center">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center text-gray-900 mb-6">
-            Flexible Pricing Plans
+        <div className="text-center">
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
+            Simple, Transparent Pricing
           </h2>
-          <p className="text-lg text-gray-600 text-center max-w-2xl mb-16">
-            Choose the plan that suits your e-commerce needs. We offer Starter, Pro, and Enterprise plans.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            Choose the plan that best fits your business needs
           </p>
 
-          <div className="flex items-center gap-4 mb-16">
-            <span className={cn("text-lg font-medium", isMonthly ? "text-gray-900" : "text-gray-500")}>Monthly</span>
+          <div className="flex items-center gap-4 mb-16 justify-center">
+            <span className={cn("text-lg font-medium", isMonthly ? "text-gray-900" : "text-gray-500")}>
+              Monthly
+            </span>
             <Switch
               ref={switchRef as any}
               checked={!isMonthly}
               onCheckedChange={handleToggle}
               className="relative"
             />
-            <span className={cn("text-lg font-medium", !isMonthly ? "text-gray-900" : "text-gray-500")}>Yearly</span>
+            <span className={cn("text-lg font-medium", !isMonthly ? "text-gray-900" : "text-gray-500")}>
+              Yearly
+            </span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px] mx-auto">

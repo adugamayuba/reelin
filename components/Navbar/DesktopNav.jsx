@@ -10,7 +10,7 @@ const Navbar = () => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   return (
-    <div className="fixed top-0 right-0 left-0 z-high w-full h-20 items-center hidden md:flex bg-[#004225] border-b border-[#005c34] overflow-hidden">
+    <div className="fixed top-0 right-0 left-0 z-high w-full h-20 items-center hidden md:flex bg-[#1B4332] border-b border-[#143026] overflow-hidden">
       {/* Animated Squares Background */}
       <div className="absolute inset-0 w-full h-full">
         <Squares
@@ -63,7 +63,7 @@ const Navbar = () => {
             </Link>
             <Link
               href="/waitlist"
-              className="px-4 py-2 bg-white text-[#004225] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
+              className="px-4 py-2 bg-white text-[#1B4332] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
             >
               See a demo
             </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
           </p>
           <Link
             href="/waitlist"
-            className="px-6 py-3 bg-[#004225] text-white rounded-lg font-medium hover:bg-[#005c34] transition-colors"
+            className="px-6 py-3 bg-[#1B4332] text-white rounded-lg font-medium hover:bg-[#143026] transition-colors"
           >
             Join Waitlist
           </Link>
