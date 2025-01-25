@@ -10,15 +10,15 @@ import Image from "next/image";
 
 const navigation = [
   {
-    url: "#why",
+    id: 'why',
     name: "Features",
   },
   {
-    url: "#",
+    id: 'testimonial',
     name: "Testimonial",
   },
   {
-    url: "#pricing",
+    id: 'pricing',
     name: "Pricing",
   },
 ];
@@ -39,6 +39,14 @@ const terms = [
 ];
 
 const Footer = () => {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-[#1B4332] pt-20 pb-8">
       <ContainerLayout>
@@ -46,7 +54,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="space-y-6">
-            <WhiteLogo />
+            <a onClick={(e) => scrollToSection(e, 'hero')} className="cursor-pointer">
+              <WhiteLogo />
+            </a>
             <p className="text-gray-300 text-sm leading-relaxed">
               Your all-in-one solution for intelligent financial management.
               Gain clarity, control, and confidence in your e-commerce finances.
@@ -59,12 +69,12 @@ const Footer = () => {
             <ul className="space-y-4">
               {navigation.map((item, index) => (
                 <li key={index}>
-                  <Link
-                    href={item.url}
-                    className="text-gray-300 hover:text-white transition-colors"
+                  <a
+                    onClick={(e) => scrollToSection(e, item.id)}
+                    className="text-gray-300 hover:text-white transition-colors cursor-pointer"
                   >
                     {item.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
