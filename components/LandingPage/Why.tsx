@@ -4,7 +4,7 @@ import ContainerLayout from "../../Layouts/ContainerLayout"
 import RealDataMonitoring from "../../assets/png/Real-data-monitoring.jpg";
 import CustomizableDashboards from "../../assets/png/Customizable Dashboards.jpg";
 import AIPoweredForecasting from "../../assets/png/AI-powered-forecasting.jpg";
-import SmartAlerts from "../../assets/png/Smart Alerts & Insights.jpg";
+import { Globe } from "../../components/ui/globe";
 
 const Why = () => {
   return (
@@ -133,18 +133,13 @@ const Why = () => {
                 </div>
 
                 <div className="md:col-span-7 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Smart Alerts & Insights</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Expand Your Global Reach</h3>
                   <p className="text-base text-gray-600 mb-4">
-                    Receive intelligent notifications about trends, anomalies, and opportunities.
+                    Scale your business globally with our AI-powered analytics and insights. Reach customers worldwide and optimize your international sales performance.
                   </p>
-                  <div className="aspect-[16/9] bg-gray-50 rounded-lg overflow-hidden">
-                    <Image
-                      src={SmartAlerts}
-                      alt="Smart alerts and insights interface"
-                      width={600}
-                      height={400}
-                      className="w-full h-full object-cover transform-gpu hover:scale-[1.02] transition-transform duration-300"
-                    />
+                  <div className="aspect-[16/9] bg-gray-50 rounded-lg overflow-hidden relative">
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/20" />
+                    <Globe className="scale-150 translate-y-20" />
                   </div>
                 </div>
               </div>
