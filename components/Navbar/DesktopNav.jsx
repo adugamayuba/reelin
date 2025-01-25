@@ -2,13 +2,11 @@ import {useState} from "react";
 import ContainerLayout from "../../Layouts/ContainerLayout";
 import { WhiteLogo } from "../../assets/svg";
 import { useRouter } from "next/router";
-import ReUseModal from "../modal/ReuseAble";
 import Link from "next/link";
 import { Squares } from "../../components/Squares";
 
 const Navbar = () => {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
   return (
     <div className="fixed top-0 right-0 left-0 z-high w-full h-20 items-center hidden md:flex bg-[#1B4332] border-b border-[#143026] overflow-hidden">
       {/* Animated Squares Background */}
@@ -36,53 +34,22 @@ const Navbar = () => {
               Product
             </Link>
             <Link
-              href="#solutions"
-              className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
-            >
-              Solutions
-            </Link>
-            <Link
               href="#pricing"
               className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
             >
               Pricing
             </Link>
-            <Link
-              href="#resources"
-              className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
-            >
-              Resources
-            </Link>
           </nav>
-          <div className="flex items-center space-x-4">
-            <Link
-              href="/login"
-              className="text-gray-200 hover:text-white text-sm font-medium transition-colors"
-            >
-              Login
-            </Link>
+          <div>
             <Link
               href="/waitlist"
               className="px-4 py-2 bg-white text-[#1B4332] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
             >
-              See a demo
+              Join waitlist
             </Link>
           </div>
         </div>
       </ContainerLayout>
-      <ReUseModal open={open} setOpen={setOpen}>
-        <div className="w-full flex flex-col items-center">
-          <p className="text-gray-800 text-lg text-center mb-8">
-            Be the first to know when we launch
-          </p>
-          <Link
-            href="/waitlist"
-            className="px-6 py-3 bg-[#1B4332] text-white rounded-lg font-medium hover:bg-[#143026] transition-colors"
-          >
-            Join Waitlist
-          </Link>
-        </div>
-      </ReUseModal>
     </div>
   );
 };
