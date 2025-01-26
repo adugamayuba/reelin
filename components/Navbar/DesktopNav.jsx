@@ -1,90 +1,64 @@
 import {useState} from "react";
 import ContainerLayout from "../../Layouts/ContainerLayout";
-import { BlackLogo } from "../../assets/svg";
-
+import { WhiteLogo } from "../../assets/svg";
 import { useRouter } from "next/router";
-import ReUseModal from "../modal/ReuseAble";
-
 import Link from "next/link";
+import { Squares } from "../../components/Squares";
+
 const Navbar = () => {
   const router = useRouter();
-  const [open, setOpen] = useState(false);
+
+  const scrollToSection = (e, sectionId) => {
+    e.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="fixed top-0 right-0 left-0 z-high w-full h-[85px]  items-center nav-styl hidden md:flex bg-[#CFDBE3]">
+    <div className="fixed left-1/2 -translate-x-1/2 top-4 z-high w-[90%] max-w-[1000px] h-14 items-center hidden md:flex bg-[#1B4332] border border-[#143026] rounded-2xl overflow-hidden">
+      {/* Animated Squares Background */}
+      <div className="absolute inset-0 w-full h-full">
+        <Squares
+          direction="right"
+          speed={0.3}
+          borderColor="rgba(255,255,255,0.1)"
+          squareSize={30}
+          hoverFillColor="rgba(255,255,255,0.1)"
+          className="opacity-30"
+        />
+      </div>
+
       <ContainerLayout>
-        <div className="w-full flex justify-between items-center mt-4">
-          <div className="w-fit">
-            <BlackLogo />
-          </div>
-          <div className="w-fit space-x-[50px] flex ">
-            <Link
-              href="#why"
-              className="text-[#0e0e0e] text-xl cursor-pointer  font-[400] "
+        <div className="w-full flex justify-between items-center h-full relative z-10 px-6">
+          <a onClick={(e) => scrollToSection(e, 'hero')} className="w-fit cursor-pointer">
+            <WhiteLogo />
+          </a>
+          <nav className="flex items-center space-x-8">
+            <a
+              onClick={(e) => scrollToSection(e, 'why')}
+              className="text-gray-200 hover:text-white text-sm font-medium transition-colors cursor-pointer"
             >
-              Features
-            </Link>
-            <Link
-              href="#pricing"
-              className="text-[#0e0e0e] text-xl cursor-pointer  font-[400] "
+              Product
+            </a>
+            <a
+              onClick={(e) => scrollToSection(e, 'pricing')}
+              className="text-gray-200 hover:text-white text-sm font-medium transition-colors cursor-pointer"
             >
               Pricing
-            </Link>
+            </a>
+          </nav>
+          <div>
             <Link
-              href="#"
-              className="text-[#0e0e0e] text-xl cursor-pointer  font-[400] "
+              href="/waitlist"
+              className="px-4 py-2 bg-white text-[#1B4332] rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
             >
-              Testimonials
-            </Link>
-            <Link
-              href="#contact"
-              className="text-[#0e0e0e] text-xl cursor-pointer  font-[400] "
-            >
-              Blog
-            </Link>
-            <Link
-              href="#contact"
-              className="text-[#0e0e0e] text-xl cursor-pointer  font-[400] "
-            >
-              Contact Us
-            </Link>
-          </div>
-          <div className="w-fit flex items-center  space-x-4   ">
-            {/* <Link
-              href={"https://demo.reelin.ai/login"}
-              rel="noopener noreferrer"
-              target="_blank"
-              className="w-auto  px-8 py-4 hover:bg-[#0047A7] bg-[#0e0e0e] cursor-pointer text-white flex items-center justify-center rounded-[6px]"
-            >
-              Login
-            </Link> */}
-            <Link
-              // href={"https://demo.reelin.ai/register"}
-              href={"/waitlist"}
-              className="w-auto  px-8 py-4 border border-customBlack text-customBlack hover:bg-[#0047A7] hover:text-white flex items-center justify-center rounded-[6px] hover:border-none cursor-pointer"
-              // rel="noopener noreferrer"
-              // target="_blank"
-            >
-              Join Waitlist
+              Join waitlist
             </Link>
           </div>
         </div>
       </ContainerLayout>
-      <ReUseModal open={open} setOpen={setOpen}>
-        <div className="w-full flex flex-col items-center">
-          <p className="text-customBlack text-lg text-center mb-8">
-            Be the first to know when we launch
-          </p>
-          <Link
-            href={"/waitlist"}
-            // href="https://demo.reelin.ai/register"
-            // target="_blank"
-            // rel="noopener noreferrer"
-            className="w-auto  px-8 py-4 border border-customBlack text-customBlack font-bold flex items-center justify-center rounded-[6px]  hover:bg-[#0047A7] hover:text-white hover:border-none"
-          >
-            Join Waitlist
-          </Link>
-        </div>
-      </ReUseModal>
     </div>
   );
 };

@@ -6,7 +6,6 @@ import Hero from "../components/LandingPage/Hero";
 import Why from "../components/LandingPage/Why";
 import ContactUs from "../components/LandingPage/ContactUs";
 import Footer from "../components/LandingPage/Footer";
-import Welcome from "../components/LandingPage/Welcome";
 import Control from "../components/LandingPage/Control";
 import Pricing from "../components/LandingPage/Pricing";
 
@@ -27,7 +26,6 @@ export default function Home() {
         <Navbar />
         <MobileNav />
         <Hero />
-        <Welcome />
         <Why />
         {/* <Control /> */}
         <Pricing />
