@@ -16,7 +16,7 @@ const plans = [
   {
     name: "STARTER",
     price: "24.99",
-    yearlyPrice: "19.99", // 20% off
+    yearlyPrice: "250", // Changed to 250/year
     period: "per month",
     features: [
       "Basic Financial Insights",
@@ -33,7 +33,7 @@ const plans = [
   {
     name: "PRO",
     price: "49.99",
-    yearlyPrice: "39.99", // 20% off
+    yearlyPrice: "500", // Changed to 500/year
     period: "per month",
     features: [
       "Advanced Analytics",
@@ -177,7 +177,7 @@ const Pricing = () => {
                         "text-lg",
                         index === 1 ? "text-gray-200" : "text-gray-500"
                       )}>
-                        /mnth
+                        {isMonthly ? "/month" : "/year"}
                       </span>
                     </>
                   )}
