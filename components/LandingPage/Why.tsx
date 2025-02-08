@@ -11,16 +11,16 @@ const Why = () => {
     <section id="why" className="py-24 bg-gray-50">
       <ContainerLayout>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4 sm:mb-6">
               Why Choose Reelin?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
               Unlock the power of AI-driven analytics to transform your Shopify store's performance
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-0">
             {/* Smart Analytics */}
             <div className="bg-white p-8 rounded-2xl border-2 border-gray-100 transition-all hover:shadow-xl hover:scale-[1.02] duration-300">
               <div className="w-16 h-16 bg-[#1B4332] rounded-xl flex items-center justify-center mb-6">
@@ -79,12 +79,12 @@ const Why = () => {
               and drive smarter decisions.
             </p>
 
-            <div className="max-w-[1200px] mx-auto px-4 overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
+            <div className="max-w-[1200px] mx-auto px-4 sm:px-6 overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-12 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 {/* First Row */}
-                <div className="md:col-span-7 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Real-Time Data Monitoring</h3>
-                  <p className="text-base text-gray-600 mb-4">
+                <div className="md:col-span-7 p-4 sm:p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-900">Real-Time Data Monitoring</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                     We analyze your Shopify store's current performance, uncover trends, and identify areas for improvement.
                   </p>
                   <div className="aspect-[16/9] bg-gray-50 rounded-lg overflow-hidden">
@@ -99,12 +99,12 @@ const Why = () => {
                   </div>
                 </div>
 
-                <div className="md:col-span-5 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300 flex flex-col">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Customizable Dashboards</h3>
-                  <p className="text-base text-gray-600 mb-4">
+                <div className="md:col-span-5 p-4 sm:p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300 flex flex-col">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-900">Customizable Dashboards</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                     Create personalized views with drag-and-drop widgets.
                   </p>
-                  <div className="flex-1 bg-gray-50 rounded-lg overflow-hidden">
+                  <div className="flex-1 bg-gray-50 rounded-lg overflow-hidden min-h-[200px]">
                     <Image
                       src={CustomizableDashboards}
                       alt="Customizable dashboard interface"
@@ -116,12 +116,12 @@ const Why = () => {
                 </div>
 
                 {/* Second Row */}
-                <div className="md:col-span-5 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300 flex flex-col">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900">AI-Powered Forecasting</h3>
-                  <p className="text-base text-gray-600 mb-4">
+                <div className="md:col-span-5 p-4 sm:p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300 flex flex-col">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-900">AI-Powered Forecasting</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                     Leverage AI algorithms to predict future trends accurately.
                   </p>
-                  <div className="flex-1 bg-gray-50 rounded-lg overflow-hidden">
+                  <div className="flex-1 bg-gray-50 rounded-lg overflow-hidden min-h-[200px]">
                     <Image
                       src={AIPoweredForecasting}
                       alt="AI-powered forecasting visualization"
@@ -132,14 +132,14 @@ const Why = () => {
                   </div>
                 </div>
 
-                <div className="md:col-span-7 p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-3 text-gray-900">Expand Your Global Reach</h3>
-                  <p className="text-base text-gray-600 mb-4">
+                <div className="md:col-span-7 p-4 sm:p-6 bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01] transition-all duration-300">
+                  <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-gray-900">Expand Your Global Reach</h3>
+                  <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                     Scale your business globally with our AI-powered analytics and insights. Reach customers worldwide and optimize your international sales performance.
                   </p>
-                  <div className="aspect-[16/9] bg-gray-50 rounded-lg overflow-hidden relative">
+                  <div className="aspect-[16/9] bg-gray-50 rounded-lg overflow-hidden relative min-h-[200px]">
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50/20" />
-                    <Globe className="scale-150 translate-y-20" />
+                    <Globe className="scale-[1.25] sm:scale-150 translate-y-10 sm:translate-y-20" />
                   </div>
                 </div>
               </div>

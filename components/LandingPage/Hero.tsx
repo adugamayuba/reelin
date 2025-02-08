@@ -93,24 +93,24 @@ const Hero = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-8 w-full pt-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 w-full pt-4 sm:pt-6">
                 {[
                   { value: "98.5%", label: "Success Rate" },
                   { value: "45.5%", label: "Recovery Rate" },
                   { value: "12.5%", label: "Growth Rate" }
                 ].map((stat, index) => (
-                  <div key={index} className="space-y-3 text-center sm:text-left">
-                    <h4 className="text-3xl sm:text-4xl font-bold text-[#4ADE80] leading-none">{stat.value}</h4>
-                    <p className="text-sm sm:text-base text-gray-300/80 font-medium">{stat.label}</p>
+                  <div key={index} className="space-y-2 sm:space-y-3 text-center">
+                    <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4ADE80] leading-none">{stat.value}</h4>
+                    <p className="text-xs sm:text-sm md:text-base text-gray-300/80 font-medium">{stat.label}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             {/* Right side - Dashboard Preview */}
-            <div className="w-full lg:w-[55%] relative">
+            <div className="w-full lg:w-[55%] relative mt-8 lg:mt-0">
               {/* Main Dashboard Card */}
-              <div className="relative rounded-[32px] overflow-hidden bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-6 sm:p-8 shadow-2xl">
+              <div className="relative rounded-[20px] sm:rounded-[32px] overflow-hidden bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-4 sm:p-6 md:p-8 shadow-2xl">
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#4ADE80]/5 to-transparent blur-3xl"></div>
                 
@@ -130,15 +130,15 @@ const Hero = () => {
                   </div>
 
                   {/* Stats Row */}
-                  <div className="grid grid-cols-3 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6">
                     {[
                       { label: "Revenue", value: "↑ 76%" },
                       { label: "Orders", value: "↑ 96%" },
                       { label: "Customers", value: "↑ 90%" }
                     ].map((stat, index) => (
-                      <div key={index} className="bg-white/[0.03] rounded-2xl p-4 backdrop-blur-sm border border-white/[0.05] transition-all duration-300 hover:bg-white/[0.05]">
-                        <p className="text-gray-400 text-xs sm:text-sm mb-2">{stat.label}</p>
-                        <p className="text-white text-base sm:text-lg font-semibold">{stat.value}</p>
+                      <div key={index} className="bg-white/[0.03] rounded-xl sm:rounded-2xl p-2 sm:p-4 backdrop-blur-sm border border-white/[0.05] transition-all duration-300 hover:bg-white/[0.05]">
+                        <p className="text-gray-400 text-[10px] sm:text-xs md:text-sm mb-1 sm:mb-2">{stat.label}</p>
+                        <p className="text-white text-sm sm:text-base md:text-lg font-semibold">{stat.value}</p>
                       </div>
                     ))}
                   </div>
