@@ -1,96 +1,158 @@
 import ContainerLayout from "../../Layouts/ContainerLayout";
 import Image from "next/image";
-import home from "../../assets/png/Home.png";
-import shopifySLogo from "../../assets/png/shopify logo.png";
 import { Squares } from "../../components/Squares";
-import { ContainerScroll } from "../../components/ui/container-scroll-animation";
 import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
+import { ShimmerButton } from "../../components/ui/shimmer-button";
+import { useRouter } from 'next/router';
+import shopifyLogo from '../../assets/png/shopify logo.png';
 
 const Hero = () => {
-  return (
-    <div id="hero" className="relative">
-      {/* Hero Section */}
-      <div className="w-full relative overflow-hidden bg-gradient-to-br from-[#1B4332] to-[#143026] min-h-[calc(100vh-64px)] flex items-center justify-center rounded-b-[80px]">
-        {/* Animated Squares Background */}
-        <div className="absolute inset-0 w-full h-full">
-          <Squares
-            direction="3d"
-            speed={0.5}
-            borderColor="rgba(255,255,255,0.1)"
-            squareSize={50}
-            hoverFillColor="rgba(255,255,255,0.1)"
-            className="opacity-50"
-          />
-        </div>
+  const router = useRouter();
 
-        <ContainerLayout>
-          <div className="w-full flex flex-col items-center text-center relative z-10">
-            {/* Dashboard Preview */}
-            <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
-              <ContainerScroll
-                titleComponent={
-                  <div className="text-center space-y-8 mb-16">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white">
-                      <span className="sr-only">Boost Your Shopify Sales with AI - Dominate Your Market</span>
-                      <div className="flex flex-col items-center gap-4">
-                        <TextGenerateEffect 
-                          words="Boost Your" 
-                          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold" 
-                          duration={0.5}
-                        />
-                        <div className="flex items-center justify-center gap-4" aria-hidden="true">
-                          <div className="flex items-center gap-3">
-                            <Image 
-                              src={shopifySLogo} 
-                              alt="" 
-                              width={60} 
-                              height={60} 
-                              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14"
-                            />
-                            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter" style={{ fontFamily: 'ShopifySans, -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif' }}>
-                              <span className="text-white">
-                                Shopify
-                              </span>
-                            </span>
-                          </div>
-                          <TextGenerateEffect 
-                            words="Sales with AI" 
-                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold" 
-                            duration={0.5}
-                          />
-                        </div>
-                        <TextGenerateEffect 
-                          words="Dominate Your Market" 
-                          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold" 
-                          duration={0.5}
-                        />
-                      </div>
-                    </h1>
-                    <p className="text-base sm:text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed font-medium">
-                      <TextGenerateEffect 
-                        words="AI-powered analytics and automation to optimize conversions, reduce costs, and accelerate growth"
-                        className="text-base sm:text-lg md:text-xl font-medium"
-                        duration={0.8}
-                        filter={false}
-                      />
-                    </p>
+  const handleWaitlistClick = () => {
+    router.push('/waitlist');
+  };
+
+  return (
+    <section id="hero" className="relative w-full min-h-[100vh] flex items-center">
+      {/* Background with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1B4332] to-[#143026] rounded-b-[40px]">
+        <Squares
+          direction="3d"
+          speed={0.5}
+          borderColor="rgba(255,255,255,0.1)"
+          squareSize={50}
+          hoverFillColor="rgba(255,255,255,0.1)"
+          className="opacity-40"
+        />
+      </div>
+
+      {/* Main content */}
+      <ContainerLayout>
+        <div className="relative z-10 flex flex-col max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+          {/* Content wrapper */}
+          <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-20">
+            {/* Left side content */}
+            <div className="w-full lg:w-[45%] flex flex-col items-start space-y-12">
+              {/* Heading */}
+              <div className="space-y-6">
+                <h1 className="flex flex-col gap-3 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.2] tracking-[-0.02em]">
+                  <div className="relative inline-block">
+                    <TextGenerateEffect 
+                      words="Boost Your" 
+                      className="font-bold"
+                      duration={0.5}
+                    />
+                    <div className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-[#4ADE80] via-[#4ADE80]/70 to-transparent"></div>
                   </div>
-                }
-              >
-                <div className="px-4 lg:px-8 flex justify-center w-full">
-                  <Image
-                    src={home}
-                    alt="Reelin Dashboard"
-                    className="w-full max-w-5xl h-auto object-cover rounded-2xl shadow-2xl border border-white/20"
-                    priority
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+                      <Image 
+                        src={shopifyLogo}
+                        alt="Shopify Logo"
+                        fill
+                        className="object-contain brightness-[1.2]"
+                      />
+                    </div>
+                    <span className="font-shopify tracking-tight">Shopify</span>
+                  </div>
+                  <TextGenerateEffect 
+                    words="Sales with AI" 
+                    className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/80"
+                    duration={0.5}
                   />
+                  <TextGenerateEffect 
+                    words="Dominate Your Market" 
+                    className="font-bold text-[#4ADE80]"
+                    duration={0.5}
+                  />
+                </h1>
+
+                {/* Subheading */}
+                <p className="text-base sm:text-lg text-gray-300/90 leading-relaxed max-w-lg font-medium">
+                  <TextGenerateEffect 
+                    words="Real-time insights, intelligent automation, and data-driven strategies to accelerate your business growth."
+                    className="font-medium"
+                    duration={0.8}
+                  />
+                </p>
+              </div>
+
+              {/* CTA Button */}
+              <div className="w-full sm:w-auto mt-8">
+                <ShimmerButton 
+                  className="w-full sm:w-auto px-6 py-3 text-base font-semibold rounded-xl"
+                  shimmerColor="rgba(74, 222, 128, 0.15)"
+                  background="rgba(74, 222, 128, 0.1)"
+                  onClick={handleWaitlistClick}
+                >
+                  <span className="text-white">
+                    Join waitlist
+                  </span>
+                </ShimmerButton>
+              </div>
+            </div>
+
+            {/* Right side - Dashboard Preview */}
+            <div className="w-full lg:w-[55%] relative mt-8 lg:mt-0">
+              {/* Main Dashboard Card */}
+              <div className="relative rounded-[16px] sm:rounded-[24px] overflow-hidden bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-3 sm:p-4 md:p-6 shadow-2xl">
+                {/* Glow Effect */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#4ADE80]/5 to-transparent blur-3xl"></div>
+                
+                {/* Chart Content */}
+                <div className="relative z-10">
+                  <div className="h-[160px] sm:h-[180px] mb-4">
+                    <div className="grid grid-cols-7 h-full gap-2 sm:gap-3">
+                      {[76, 96, 85, 90, 82, 95, 90].map((height, i) => (
+                        <div key={i} className="flex flex-col justify-end">
+                          <div 
+                            className="bg-gradient-to-t from-[#4ADE80] to-[#4ADE80]/40 rounded-lg transition-all duration-300 hover:to-[#4ADE80]/60 hover:scale-105" 
+                            style={{height: `${height}%`}}
+                          ></div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Stats Row */}
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+                    {[
+                      { label: "Revenue", value: "↑ 76%" },
+                      { label: "Orders", value: "↑ 96%" },
+                      { label: "Customers", value: "↑ 90%" }
+                    ].map((stat, index) => (
+                      <div key={index} className="bg-white/[0.03] rounded-xl sm:rounded-2xl p-2 sm:p-4 backdrop-blur-sm border border-white/[0.05] transition-all duration-300 hover:bg-white/[0.05]">
+                        <p className="text-gray-400 text-[10px] sm:text-xs md:text-sm mb-1 sm:mb-2">{stat.label}</p>
+                        <p className="text-white text-sm sm:text-base md:text-lg font-semibold">{stat.value}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </ContainerScroll>
+              </div>
+
+              {/* Floating Stats Card */}
+              <div className="absolute -top-8 -right-8 bg-white/[0.03] backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/[0.05] transform hover:scale-105 transition-transform duration-300">
+                <div className="text-white">
+                  <h4 className="text-sm font-medium mb-2">Monthly Growth</h4>
+                  <div className="text-[#4ADE80] text-xl font-bold">+25.5%</div>
+                </div>
+              </div>
+
+              {/* Activity Card */}
+              <div className="absolute -bottom-6 -left-8 bg-white/[0.03] backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/[0.05] transform hover:scale-105 transition-transform duration-300">
+                <div className="text-white">
+                  <h4 className="text-sm font-medium mb-3">Activity Score</h4>
+                  <div className="w-32 h-2 bg-white/10 rounded-full overflow-hidden">
+                    <div className="w-[85%] h-full bg-[#4ADE80] rounded-full"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </ContainerLayout>
-      </div>
-    </div>
+        </div>
+      </ContainerLayout>
+    </section>
   );
 };
 

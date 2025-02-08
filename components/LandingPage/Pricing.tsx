@@ -95,18 +95,18 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="py-24 bg-gray-50">
+    <section id="pricing" className="py-16 sm:py-24 bg-gray-50">
       <ContainerLayout>
-        <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
+        <div className="text-center px-4 sm:px-0">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4 sm:mb-6">
             Simple, Transparent Pricing
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8">
             Choose the plan that best fits your business needs
           </p>
 
-          <div className="flex items-center gap-4 mb-16 justify-center">
-            <span className={cn("text-lg font-medium", isMonthly ? "text-gray-900" : "text-gray-500")}>
+          <div className="flex items-center gap-3 sm:gap-4 mb-12 sm:mb-16 justify-center">
+            <span className={cn("text-base sm:text-lg font-medium", isMonthly ? "text-gray-900" : "text-gray-500")}>
               Monthly
             </span>
             <Switch
@@ -115,12 +115,12 @@ const Pricing = () => {
               onCheckedChange={handleToggle}
               className="relative"
             />
-            <span className={cn("text-lg font-medium", !isMonthly ? "text-gray-900" : "text-gray-500")}>
+            <span className={cn("text-base sm:text-lg font-medium", !isMonthly ? "text-gray-900" : "text-gray-500")}>
               Yearly
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-[1200px] mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 w-full max-w-[1200px] mx-auto">
             {plans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -135,7 +135,7 @@ const Pricing = () => {
                   delay: index * 0.1,
                 }}
                 className={cn(
-                  "rounded-2xl p-8 relative flex flex-col border border-gray-100 bg-white min-h-[680px]",
+                  "rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 relative flex flex-col border border-gray-100 bg-white min-h-[600px] sm:min-h-[680px]",
                   index === 1 
                     ? "bg-[#1B4332] text-white shadow-xl transform-gpu hover:scale-[1.02]" 
                     : "shadow-sm hover:shadow-xl transform-gpu hover:scale-[1.01]",
@@ -143,16 +143,16 @@ const Pricing = () => {
                 )}
               >
                 <h3 className={cn(
-                  "text-2xl font-semibold mb-6",
+                  "text-xl sm:text-2xl font-semibold mb-4 sm:mb-6",
                   index === 1 ? "text-white" : "text-gray-900"
                 )}>
                   {plan.name}
                 </h3>
 
-                <div className="flex items-baseline gap-2 mb-8">
+                <div className="flex items-baseline gap-1 sm:gap-2 mb-6 sm:mb-8">
                   {plan.price === "Custom" ? (
                     <span className={cn(
-                      "text-4xl font-bold",
+                      "text-3xl sm:text-4xl font-bold",
                       index === 1 ? "text-white" : "text-gray-900"
                     )}>
                       {plan.price}
@@ -160,7 +160,7 @@ const Pricing = () => {
                   ) : (
                     <>
                       <span className={cn(
-                        "text-4xl font-bold",
+                        "text-3xl sm:text-4xl font-bold",
                         index === 1 ? "text-white" : "text-gray-900"
                       )}>
                         $
@@ -174,7 +174,7 @@ const Pricing = () => {
                         />
                       </span>
                       <span className={cn(
-                        "text-lg",
+                        "text-base sm:text-lg",
                         index === 1 ? "text-gray-200" : "text-gray-500"
                       )}>
                         {isMonthly ? "/month" : "/year"}
@@ -188,7 +188,7 @@ const Pricing = () => {
                   target={plan.name === "ENTERPRISE" ? "_blank" : undefined}
                   rel={plan.name === "ENTERPRISE" ? "noopener noreferrer" : undefined}
                   className={cn(
-                    "w-full rounded-xl py-4 px-8 text-lg font-semibold text-center transition-all transform hover:scale-[1.02] duration-300",
+                    "w-full rounded-lg sm:rounded-xl py-3 sm:py-4 px-6 sm:px-8 text-base sm:text-lg font-semibold text-center transition-all transform hover:scale-[1.02] duration-300",
                     index === 1 
                       ? "bg-white text-[#1B4332] hover:bg-gray-50" 
                       : "bg-[#1B4332] text-white hover:bg-[#143026]"
@@ -197,15 +197,15 @@ const Pricing = () => {
                   {plan.buttonText}
                 </Link>
 
-                <div className="mt-8 flex flex-col space-y-4">
+                <div className="mt-6 sm:mt-8 flex flex-col space-y-3 sm:space-y-4">
                   {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3">
+                    <div key={idx} className="flex items-start gap-2 sm:gap-3">
                       <Check className={cn(
-                        "h-5 w-5 mt-0.5",
+                        "h-4 w-4 sm:h-5 sm:w-5 mt-0.5",
                         index === 1 ? "text-gray-200" : "text-gray-400"
                       )} />
                       <span className={cn(
-                        "text-lg leading-relaxed",
+                        "text-base sm:text-lg leading-relaxed",
                         index === 1 ? "text-gray-200" : "text-gray-600"
                       )}>
                         {feature}
@@ -215,7 +215,7 @@ const Pricing = () => {
                 </div>
 
                 <p className={cn(
-                  "mt-auto pt-8 text-sm",
+                  "mt-auto pt-6 sm:pt-8 text-xs sm:text-sm",
                   index === 1 ? "text-gray-200" : "text-gray-500"
                 )}>
                   {plan.description}
