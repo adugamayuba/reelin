@@ -14,9 +14,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative w-full min-h-[90vh] flex items-center">
+    <section id="hero" className="relative w-full min-h-[100vh] flex items-center">
       {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1B4332] to-[#143026] rounded-b-[80px]">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1B4332] to-[#143026] rounded-b-[40px]">
         <Squares
           direction="3d"
           speed={0.5}
@@ -29,24 +29,24 @@ const Hero = () => {
 
       {/* Main content */}
       <ContainerLayout>
-        <div className="relative z-10 flex flex-col max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="relative z-10 flex flex-col max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
           {/* Content wrapper */}
-          <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+          <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-20">
             {/* Left side content */}
-            <div className="w-full lg:w-[45%] flex flex-col items-start space-y-10">
+            <div className="w-full lg:w-[45%] flex flex-col items-start space-y-12">
               {/* Heading */}
-              <div className="space-y-8">
-                <h1 className="flex flex-col gap-5 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] tracking-[-0.02em]">
+              <div className="space-y-6">
+                <h1 className="flex flex-col gap-3 text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.2] tracking-[-0.02em]">
                   <div className="relative inline-block">
                     <TextGenerateEffect 
                       words="Boost Your" 
                       className="font-bold"
                       duration={0.5}
                     />
-                    <div className="absolute -bottom-2 left-0 w-full h-[3px] bg-gradient-to-r from-[#4ADE80] via-[#4ADE80]/70 to-transparent"></div>
+                    <div className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-[#4ADE80] via-[#4ADE80]/70 to-transparent"></div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+                  <div className="flex items-center gap-3">
+                    <div className="relative w-8 h-8 sm:w-10 sm:h-10">
                       <Image 
                         src={shopifyLogo}
                         alt="Shopify Logo"
@@ -69,7 +69,7 @@ const Hero = () => {
                 </h1>
 
                 {/* Subheading */}
-                <p className="text-lg sm:text-xl text-gray-300/90 leading-relaxed max-w-xl font-medium">
+                <p className="text-base sm:text-lg text-gray-300/90 leading-relaxed max-w-lg font-medium">
                   <TextGenerateEffect 
                     words="Real-time insights, intelligent automation, and data-driven strategies to accelerate your business growth."
                     className="font-medium"
@@ -79,9 +79,9 @@ const Hero = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="w-full sm:w-auto">
+              <div className="w-full sm:w-auto mt-8">
                 <ShimmerButton 
-                  className="w-full sm:w-auto px-8 py-4 text-lg font-semibold rounded-2xl"
+                  className="w-full sm:w-auto px-6 py-3 text-base font-semibold rounded-xl"
                   shimmerColor="rgba(74, 222, 128, 0.15)"
                   background="rgba(74, 222, 128, 0.1)"
                   onClick={handleWaitlistClick}
@@ -91,37 +91,23 @@ const Hero = () => {
                   </span>
                 </ShimmerButton>
               </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-8 w-full pt-4 sm:pt-6">
-                {[
-                  { value: "98.5%", label: "Success Rate" },
-                  { value: "45.5%", label: "Recovery Rate" },
-                  { value: "12.5%", label: "Growth Rate" }
-                ].map((stat, index) => (
-                  <div key={index} className="space-y-2 sm:space-y-3 text-center">
-                    <h4 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#4ADE80] leading-none">{stat.value}</h4>
-                    <p className="text-xs sm:text-sm md:text-base text-gray-300/80 font-medium">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* Right side - Dashboard Preview */}
             <div className="w-full lg:w-[55%] relative mt-8 lg:mt-0">
               {/* Main Dashboard Card */}
-              <div className="relative rounded-[20px] sm:rounded-[32px] overflow-hidden bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-4 sm:p-6 md:p-8 shadow-2xl">
+              <div className="relative rounded-[16px] sm:rounded-[24px] overflow-hidden bg-white/[0.02] backdrop-blur-sm border border-white/[0.05] p-3 sm:p-4 md:p-6 shadow-2xl">
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#4ADE80]/5 to-transparent blur-3xl"></div>
                 
                 {/* Chart Content */}
                 <div className="relative z-10">
-                  <div className="h-[280px] sm:h-[320px] mb-8">
-                    <div className="grid grid-cols-7 h-full gap-3 sm:gap-4">
+                  <div className="h-[160px] sm:h-[180px] mb-4">
+                    <div className="grid grid-cols-7 h-full gap-2 sm:gap-3">
                       {[76, 96, 85, 90, 82, 95, 90].map((height, i) => (
                         <div key={i} className="flex flex-col justify-end">
                           <div 
-                            className="bg-gradient-to-t from-[#4ADE80] to-[#4ADE80]/40 rounded-xl transition-all duration-300 hover:to-[#4ADE80]/60 hover:scale-105" 
+                            className="bg-gradient-to-t from-[#4ADE80] to-[#4ADE80]/40 rounded-lg transition-all duration-300 hover:to-[#4ADE80]/60 hover:scale-105" 
                             style={{height: `${height}%`}}
                           ></div>
                         </div>
@@ -130,7 +116,7 @@ const Hero = () => {
                   </div>
 
                   {/* Stats Row */}
-                  <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-6">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
                     {[
                       { label: "Revenue", value: "↑ 76%" },
                       { label: "Orders", value: "↑ 96%" },
