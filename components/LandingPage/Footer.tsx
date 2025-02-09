@@ -137,11 +137,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Logo Banner */}
-        <div className="border-t border-white/10 pt-8 mb-8">
-          <Image src={bigLogo} alt="Reelin" className="max-w-full h-auto" />
-        </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col lg:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">

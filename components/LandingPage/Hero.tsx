@@ -4,7 +4,6 @@ import { Squares } from "../../components/Squares";
 import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
 import { ShimmerButton } from "../../components/ui/shimmer-button";
 import { useRouter } from 'next/router';
-import shopifyLogo from '../../assets/png/shopify logo.png';
 
 const Hero = () => {
   const router = useRouter();
@@ -45,16 +44,9 @@ const Hero = () => {
                     />
                     <div className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-[#4ADE80] via-[#4ADE80]/70 to-transparent"></div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="relative w-8 h-8 sm:w-10 sm:h-10">
-                      <Image 
-                        src={shopifyLogo}
-                        alt="Shopify Logo"
-                        fill
-                        className="object-contain brightness-[1.2]"
-                      />
-                    </div>
-                    <span className="font-shopify tracking-tight">Shopify</span>
+                  <div className="flex flex-row items-center">
+                    <img src="/assets/png/shopify-logo.png" alt="Shopify Logo" width="48" height="48" />
+                    <span className="text-white text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold">Shopify</span>
                   </div>
                   <TextGenerateEffect 
                     words="Sales with AI" 
@@ -140,7 +132,7 @@ const Hero = () => {
               </div>
 
               {/* Activity Card */}
-              <div className="absolute -bottom-6 -left-8 bg-white/[0.03] backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/[0.05] transform hover:scale-105 transition-transform duration-300">
+              <div className="absolute -bottom-12 right-12 sm:right-16 bg-white/[0.03] backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/[0.05] transform hover:scale-105 transition-transform duration-300">
                 <div className="text-white">
                   <h4 className="text-sm font-medium mb-3">Activity Score</h4>
                   <div className="w-32 h-2 bg-white/10 rounded-full overflow-hidden">

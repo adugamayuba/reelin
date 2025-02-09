@@ -446,7 +446,7 @@ const Why = () => {
 
           {/* Features Showcase Section */}
           <div className="w-full overflow-hidden">
-            <div className="text-center mb-6 sm:mb-8">
+            <div className="text-center mt-8 mb-6 sm:mb-8">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-3">
                 Powerful Features to Supercharge Your Analytics
               </h2>
