@@ -132,7 +132,7 @@ const Hero = () => {
               </div>
 
               {/* Activity Card */}
-              <div className="absolute -bottom-6 -left-8 bg-white/[0.03] backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/[0.05] transform hover:scale-105 transition-transform duration-300">
+              <div className="absolute -bottom-12 right-12 sm:right-16 bg-white/[0.03] backdrop-blur-md rounded-2xl p-5 shadow-2xl border border-white/[0.05] transform hover:scale-105 transition-transform duration-300">
                 <div className="text-white">
                   <h4 className="text-sm font-medium mb-3">Activity Score</h4>
                   <div className="w-32 h-2 bg-white/10 rounded-full overflow-hidden">
