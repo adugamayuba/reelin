@@ -76,16 +76,16 @@ const ContactUs = () => {
                     <Image
                         src={leftStar}
                         alt="Decorative star"
-                        width={leftStar?.width}
-                        height={leftStar?.height}
+                        width={200}
+                        height={200}
                     />
                 </div>
                 <div className="absolute right-0 bottom-0 opacity-20">
                     <Image
                         src={rightStar}
                         alt="Decorative star"
-                        width={rightStar?.width}
-                        height={rightStar?.height}
+                        width={200}
+                        height={200}
                     />
                 </div>
 
